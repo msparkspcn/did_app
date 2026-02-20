@@ -1,0 +1,1486 @@
+Initialized native services in: /Users/minsupark/.gradle/native
+Initialized jansi services in: /Users/minsupark/.gradle/native
+The client will now receive all logging from the daemon (pid: 55121). The daemon log file: /Users/minsupark/.gradle/daemon/8.14/daemon-55121.out.log
+Starting 2nd build in daemon [uptime: 48.886 secs, performance: 98%, GC rate: 0.00/s, heap usage: 0% of 2 GiB]
+Using 12 worker leases.
+Now considering [/Users/minsupark/.gemini/antigravity/scratch/did-project] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file '/Users/minsupark/.gemini/antigravity/scratch/did-project/settings.gradle'.
+Projects loaded. Root project using build file '/Users/minsupark/.gemini/antigravity/scratch/did-project/build.gradle'.
+Included projects: [root project 'DIDApp', project ':app']
+
+> Configure project :
+Evaluating root project 'DIDApp' using build file '/Users/minsupark/.gemini/antigravity/scratch/did-project/build.gradle'.
+Resolved plugin [id: 'com.android.application', version: '8.2.2', apply: false]
+Resolved plugin [id: 'com.android.library', version: '8.2.2', apply: false]
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '1.9.22', apply: false]
+Resolved plugin [id: 'com.google.dagger.hilt.android', version: '2.48', apply: false]
+
+> Configure project :app
+Evaluating project ':app' using build file '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/build.gradle'.
+Resolved plugin [id: 'com.android.application']
+Resolved plugin [id: 'org.jetbrains.kotlin.android']
+Resolved plugin [id: 'kotlin-kapt']
+Resolved plugin [id: 'com.google.dagger.hilt.android']
+Using default execution profile
+Using Kotlin Gradle Plugin gradle82 variant
+All projects evaluated.
+Task name matched 'assembleDebug'
+Selected primary task 'assembleDebug' from project :app
+Tasks to be executed: [task ':app:preBuild', task ':app:preDebugBuild', task ':app:mergeDebugNativeDebugMetadata', task ':app:checkKotlinGradlePluginConfigurationErrors', task ':app:checkDebugAarMetadata', task ':app:generateDebugResValues', task ':app:mapDebugSourceSetPaths', task ':app:generateDebugResources', task ':app:mergeDebugResources', task ':app:packageDebugResources', task ':app:parseDebugLocalResources', task ':app:createDebugCompatibleScreenManifests', task ':app:extractDeepLinksDebug', task ':app:processDebugMainManifest', task ':app:processDebugManifest', task ':app:processDebugManifestForPackage', task ':app:processDebugResources', task ':app:kaptGenerateStubsDebugKotlin', task ':app:kaptDebugKotlin', task ':app:compileDebugKotlin', task ':app:javaPreCompileDebug', task ':app:compileDebugJavaWithJavac', task ':app:mergeDebugShaders', task ':app:compileDebugShaders', task ':app:generateDebugAssets', task ':app:mergeDebugAssets', task ':app:compressDebugAssets', task ':app:desugarDebugFileDependencies', task ':app:hiltAggregateDepsDebug', task ':app:hiltJavaCompileDebug', task ':app:transformDebugClassesWithAsm', task ':app:dexBuilderDebug', task ':app:mergeDebugGlobalSynthetics', task ':app:processDebugJavaRes', task ':app:mergeDebugJavaResource', task ':app:checkDebugDuplicateClasses', task ':app:mergeExtDexDebug', task ':app:mergeLibDexDebug', task ':app:mergeProjectDexDebug', task ':app:mergeDebugJniLibFolders', task ':app:mergeDebugNativeLibs', task ':app:stripDebugDebugSymbols', task ':app:validateSigningDebug', task ':app:writeDebugAppMetadata', task ':app:writeDebugSigningConfigVersions', task ':app:packageDebug', task ':app:createDebugApkListingFileRedirect', task ':app:assembleDebug']
+Tasks that were excluded: []
+Analytics other plugin to proto: Unknown plugin type org.gradle.api.plugins.HelpTasksPlugin_Decorated expected enum ORG_GRADLE_API_PLUGINS_HELPTASKSPLUGIN_DECORATED
+Analytics other plugin to proto: Unknown plugin type org.gradle.api.plugins.SoftwareReportingTasksPlugin_Decorated expected enum ORG_GRADLE_API_PLUGINS_SOFTWAREREPORTINGTASKSPLUGIN_DECORATED
+Analytics other plugin to proto: Unknown plugin type org.gradle.buildinit.plugins.BuildInitPlugin_Decorated expected enum ORG_GRADLE_BUILDINIT_PLUGINS_BUILDINITPLUGIN_DECORATED
+Analytics other plugin to proto: Unknown plugin type org.gradle.buildinit.plugins.WrapperPlugin_Decorated expected enum ORG_GRADLE_BUILDINIT_PLUGINS_WRAPPERPLUGIN_DECORATED
+Analytics other plugin to proto: Unknown plugin type org.gradle.api.plugins.HelpTasksPlugin_Decorated expected enum ORG_GRADLE_API_PLUGINS_HELPTASKSPLUGIN_DECORATED
+Analytics other plugin to proto: Unknown plugin type org.gradle.api.plugins.SoftwareReportingTasksPlugin_Decorated expected enum ORG_GRADLE_API_PLUGINS_SOFTWAREREPORTINGTASKSPLUGIN_DECORATED
+Analytics other plugin to proto: Unknown plugin type org.gradle.buildinit.plugins.BuildInitPlugin_Decorated expected enum ORG_GRADLE_BUILDINIT_PLUGINS_BUILDINITPLUGIN_DECORATED
+Analytics other plugin to proto: Unknown plugin type org.gradle.buildinit.plugins.WrapperPlugin_Decorated expected enum ORG_GRADLE_BUILDINIT_PLUGINS_WRAPPERPLUGIN_DECORATED
+Analytics other plugin to proto: Unknown plugin type org.gradle.language.base.plugins.LifecycleBasePlugin_Decorated expected enum ORG_GRADLE_LANGUAGE_BASE_PLUGINS_LIFECYCLEBASEPLUGIN_DECORATED
+Analytics other plugin to proto: Unknown plugin type org.gradle.api.plugins.BasePlugin_Decorated expected enum ORG_GRADLE_API_PLUGINS_BASEPLUGIN_DECORATED
+Analytics other plugin to proto: Unknown plugin type org.gradle.api.plugins.JvmEcosystemPlugin_Decorated expected enum ORG_GRADLE_API_PLUGINS_JVMECOSYSTEMPLUGIN_DECORATED
+Analytics other plugin to proto: Unknown plugin type org.gradle.api.plugins.ReportingBasePlugin_Decorated expected enum ORG_GRADLE_API_PLUGINS_REPORTINGBASEPLUGIN_DECORATED
+Analytics other plugin to proto: Unknown plugin type org.gradle.api.plugins.JvmToolchainsPlugin_Decorated expected enum ORG_GRADLE_API_PLUGINS_JVMTOOLCHAINSPLUGIN_DECORATED
+Analytics other plugin to proto: Unknown plugin type org.gradle.api.plugins.JavaBasePlugin_Decorated expected enum ORG_GRADLE_API_PLUGINS_JAVABASEPLUGIN_DECORATED
+Analytics other plugin to proto: Unknown plugin type dagger.hilt.android.plugin.HiltGradlePlugin expected enum DAGGER_HILT_ANDROID_PLUGIN_HILTGRADLEPLUGIN
+Resolve mutations for :app:preBuild (Thread[Execution worker,5,main]) started.
+:app:preBuild (Thread[Execution worker,5,main]) started.
+
+> Task :app:preBuild UP-TO-DATE
+Skipping task ':app:preBuild' as it has no actions.
+Resolve mutations for :app:preDebugBuild (Thread[Execution worker,5,main]) started.
+:app:preDebugBuild (Thread[Execution worker,5,main]) started.
+
+> Task :app:preDebugBuild UP-TO-DATE
+Skipping task ':app:preDebugBuild' as it has no actions.
+Resolve mutations for :app:mergeDebugNativeDebugMetadata (Thread[Execution worker,5,main]) started.
+:app:mergeDebugNativeDebugMetadata (Thread[Execution worker,5,main]) started.
+
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+Skipping task ':app:mergeDebugNativeDebugMetadata' as it has no source files and no previous output files.
+Resolve mutations for :app:checkKotlinGradlePluginConfigurationErrors (Thread[Execution worker,5,main]) started.
+:app:checkKotlinGradlePluginConfigurationErrors (Thread[Execution worker,5,main]) started.
+
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+Caching disabled for task ':app:checkKotlinGradlePluginConfigurationErrors' because:
+  Build cache is disabled
+Task ':app:checkKotlinGradlePluginConfigurationErrors' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Resolve mutations for :app:checkDebugAarMetadata (Thread[Execution worker,5,main]) started.
+:app:checkDebugAarMetadata (Thread[Execution worker,5,main]) started.
+Resolve mutations for :app:generateDebugResValues (Thread[Execution worker Thread 10,5,main]) started.
+:app:generateDebugResValues (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :app:generateDebugResValues
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/res/resValues/debug
+Caching disabled for task ':app:generateDebugResValues' because:
+  Build cache is disabled
+Task ':app:generateDebugResValues' is not up-to-date because:
+  Output property 'outputDirectory' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/res/resValues/debug has been removed.
+Resolve mutations for :app:mapDebugSourceSetPaths (Thread[Execution worker Thread 3,5,main]) started.
+:app:mapDebugSourceSetPaths (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :app:mapDebugSourceSetPaths
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/source_set_path_map/debug/file-map.txt
+Caching disabled for task ':app:mapDebugSourceSetPaths' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:mapDebugSourceSetPaths' is not up-to-date because:
+  Output property 'filepathMappingFile' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/source_set_path_map/debug/file-map.txt has been removed.
+Resolve mutations for :app:generateDebugResources (Thread[Execution worker Thread 3,5,main]) started.
+:app:generateDebugResources (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :app:generateDebugResources
+Skipping task ':app:generateDebugResources' as it has no actions.
+Resolve mutations for :app:mergeDebugResources (Thread[Execution worker Thread 3,5,main]) started.
+:app:mergeDebugResources (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :app:checkDebugAarMetadata
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/aar_metadata_check/debug
+Caching disabled for task ':app:checkDebugAarMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:checkDebugAarMetadata' is not up-to-date because:
+  Output property 'dummyOutputDirectory' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/aar_metadata_check/debug has been removed.
+
+> Task :app:mergeDebugResources
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/res/pngs/debug
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/data_binding_layout_info_type_merge/debug/out
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res_blame_folder/debug/out
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources
+Caching disabled for task ':app:mergeDebugResources' because:
+  Build cache is disabled
+Task ':app:mergeDebugResources' is not up-to-date because:
+  Output property 'blameLogOutputFolder' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res_blame_folder/debug/out has been removed.
+  Output property 'blameLogOutputFolder' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2 has been removed.
+  Output property 'blameLogOutputFolder' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json has been removed.
+  and more...
+The input changes require a full rebuild for incremental task ':app:mergeDebugResources'.
+[MergeResources] Inputs are non-incremental full task action.
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values_values.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hi/values-hi.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-hi_values-hi.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-de/values-de.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-de_values-de.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-lo/values-lo.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-lo_values-lo.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-mk/values-mk.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-mk_values-mk.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ur/values-ur.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-ur_values-ur.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pt/values-pt.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-pt_values-pt.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ml/values-ml.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-ml_values-ml.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-lt/values-lt.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-lt_values-lt.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-mn/values-mn.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-mn_values-mn.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-is/values-is.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-is_values-is.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-zh-rHK_values-zh-rHK.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-it/values-it.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-it_values-it.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-lv/values-lv.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-lv_values-lv.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-af/values-af.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-af_values-af.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hr/values-hr.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-hr_values-hr.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v21/values-v21.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-v21_values-v21.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-am/values-am.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-am_values-am.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-vi/values-vi.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-vi_values-vi.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-nb/values-nb.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-nb_values-nb.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-my/values-my.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-my_values-my.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-nl/values-nl.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-nl_values-nl.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-uz/values-uz.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-uz_values-uz.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hu/values-hu.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-hu_values-hu.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-es-rUS/values-es-rUS.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-es-rUS_values-es-rUS.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-zh-rCN_values-zh-rCN.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-fr-rCA_values-fr-rCA.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ro/values-ro.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-ro_values-ro.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v23/values-v23.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-v23_values-v23.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-si/values-si.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-si_values-si.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ru/values-ru.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-ru_values-ru.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-be/values-be.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-be_values-be.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-b+sr+Latn_values-b+sr+Latn.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-mr/values-mr.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-mr_values-mr.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-iw/values-iw.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-iw_values-iw.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ka/values-ka.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-ka_values-ka.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ko/values-ko.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-ko_values-ko.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sl/values-sl.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-sl_values-sl.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-en-rGB_values-en-rGB.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sk/values-sk.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-sk_values-sk.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v16/values-v16.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-v16_values-v16.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-zh-rTW_values-zh-rTW.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ja/values-ja.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-ja_values-ja.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-es/values-es.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-es_values-es.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ta/values-ta.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-ta_values-ta.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ne/values-ne.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-ne_values-ne.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-gl/values-gl.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-gl_values-gl.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sv/values-sv.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-sv_values-sv.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pl/values-pl.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-pl_values-pl.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-az/values-az.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-az_values-az.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sw/values-sw.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-sw_values-sw.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-as/values-as.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-as_values-as.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-tr/values-tr.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-tr_values-tr.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fi/values-fi.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-fi_values-fi.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-da/values-da.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-da_values-da.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fa/values-fa.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-fa_values-fa.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-tl/values-tl.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-tl_values-tl.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ca/values-ca.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-ca_values-ca.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-en-rAU_values-en-rAU.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-en-rXC_values-en-rXC.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-en-rCA_values-en-rCA.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-bg/values-bg.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-bg_values-bg.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ky/values-ky.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-ky_values-ky.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-kn/values-kn.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-kn_values-kn.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-en-rIN_values-en-rIN.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sq/values-sq.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-sq_values-sq.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sr/values-sr.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-sr_values-sr.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-in/values-in.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-in_values-in.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-pt-rBR_values-pt-rBR.arsc.flat
+Compiling xml file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-et/values-et.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-et_values-et.arsc.flat
+Compiling xml file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-th/values-th.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-th_values-th.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-gu/values-gu.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-gu_values-gu.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v24/values-v24.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-v24_values-v24.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-bn/values-bn.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-bn_values-bn.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hy/values-hy.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-hy_values-hy.arsc.flat
+
+Resolve mutations for :app:packageDebugResources (Thread[Execution worker,5,main]) started.
+:app:packageDebugResources (Thread[Execution worker,5,main]) started.
+
+> Task :app:packageDebugResources
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/data_binding_layout_info_type_package/debug/out
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/packaged_res/debug
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/packageDebugResources
+Caching disabled for task ':app:packageDebugResources' because:
+  Build cache is disabled
+Task ':app:packageDebugResources' is not up-to-date because:
+  Output property 'dataBindingLayoutInfoOutFolder' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/data_binding_layout_info_type_package/debug/out has been removed.
+  Output property 'incrementalFolder' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/packageDebugResources has been removed.
+  Output property 'incrementalFolder' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties has been removed.
+  and more...
+The input changes require a full rebuild for incremental task ':app:packageDebugResources'.
+[MergeResources] Inputs are non-incremental full task action.
+Resolve mutations for :app:parseDebugLocalResources (Thread[included builds,5,main]) started.
+:app:parseDebugLocalResources (Thread[Execution worker,5,main]) started.
+Resolve mutations for :app:createDebugCompatibleScreenManifests (Thread[Execution worker Thread 5,5,main]) started.
+:app:createDebugCompatibleScreenManifests (Thread[Execution worker Thread 5,5,main]) started.
+
+> Task :app:createDebugCompatibleScreenManifests
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/compatible_screen_manifest/debug
+Caching disabled for task ':app:createDebugCompatibleScreenManifests' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:createDebugCompatibleScreenManifests' is not up-to-date because:
+  Output property 'outputFolder' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/compatible_screen_manifest/debug has been removed.
+  Output property 'outputFolder' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/compatible_screen_manifest/debug/output-metadata.json has been removed.
+Resolve mutations for :app:extractDeepLinksDebug (Thread[Execution worker Thread 5,5,main]) started.
+:app:extractDeepLinksDebug (Thread[Execution worker Thread 5,5,main]) started.
+
+> Task :app:extractDeepLinksDebug
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/navigation_json/debug/navigation.json
+Caching disabled for task ':app:extractDeepLinksDebug' because:
+  Build cache is disabled
+Task ':app:extractDeepLinksDebug' is not up-to-date because:
+  Output property 'navigationJson' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/navigation_json/debug/navigation.json has been removed.
+Resolve mutations for :app:processDebugMainManifest (Thread[Execution worker Thread 5,5,main]) started.
+:app:processDebugMainManifest (Thread[Execution worker Thread 5,5,main]) started.
+
+> Task :app:parseDebugLocalResources
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/local_only_symbol_list/debug/R-def.txt
+Caching disabled for task ':app:parseDebugLocalResources' because:
+  Build cache is disabled
+Task ':app:parseDebugLocalResources' is not up-to-date because:
+  Output property 'librarySymbolsFile' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/local_only_symbol_list/debug/R-def.txt has been removed.
+The input changes require a full rebuild for incremental task ':app:parseDebugLocalResources'.
+
+> Task :app:mergeDebugResources
+Compiling xml file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/res/drawable/ic_launcher_foreground.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/drawable_ic_launcher_foreground.xml.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ms/values-ms.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-ms_values-ms.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-kk/values-kk.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-kk_values-kk.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-uk/values-uk.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-uk_values-uk.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-eu/values-eu.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-eu_values-eu.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-el/values-el.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-el_values-el.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-cs/values-cs.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-cs_values-cs.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-pt-rPT_values-pt-rPT.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ar/values-ar.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-ar_values-ar.arsc.flat
+Compiling xml file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/res/xml/backup_rules.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/xml_backup_rules.xml.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fr/values-fr.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-fr_values-fr.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zu/values-zu.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-zu_values-zu.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-km/values-km.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-km_values-km.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-bs/values-bs.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-bs_values-bs.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-te/values-te.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-te_values-te.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-or/values-or.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-or_values-or.arsc.flat
+Compiling XML table /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pa/values-pa.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/values-pa_values-pa.arsc.flat
+Compiling xml file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/res/drawable/ic_launcher_background.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat
+Compiling xml file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/res/xml/data_extraction_rules.xml to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_res/debug/xml_data_extraction_rules.xml.flat
+
+> Task :app:processDebugMainManifest
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/outputs/logs/manifest-merger-debug-report.txt
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml
+Caching disabled for task ':app:processDebugMainManifest' because:
+  Build cache is disabled
+Task ':app:processDebugMainManifest' is not up-to-date because:
+  Output property 'mergeBlameFile' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt has been removed.
+  Output property 'mergedManifest' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml has been removed.
+  Output property 'reportFile' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/outputs/logs/manifest-merger-debug-report.txt has been removed.
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/a15d3f5b68827479246b6a4096f42a56/transformed/jetified-media3-ui-1.2.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/b811e932fc596a6963b45e334cfadf8d/transformed/jetified-media3-extractor-1.2.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/a7f36e887c6d1c3bd1144fe1679d0b1f/transformed/jetified-media3-container-1.2.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/b967bfc010ed8690fbbabaabb77ae810/transformed/jetified-media3-datasource-1.2.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/ecd7b334423cb83016b230f022708454/transformed/jetified-media3-decoder-1.2.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/85bc65d3026be107932bc5a8d4ff032d/transformed/jetified-media3-database-1.2.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/1e84e823c37eebd84a0fa3354293a6eb/transformed/jetified-media3-common-1.2.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/1287575a3acad730c74b445024957701/transformed/jetified-media3-exoplayer-1.2.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/de19cea25388de20c0e7263be1c786a5/transformed/jetified-hilt-navigation-compose-1.1.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/02a79eb773a5af7db7876bfd119428a0/transformed/jetified-hilt-navigation-1.1.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/10edd75b42d867ccf39e988e49b24ff5/transformed/jetified-hilt-android-2.48/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/de36f0f7700f7f419c87197e142f1498/transformed/jetified-material3-1.1.1/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/180da06029f5949ec2621288d5947925/transformed/jetified-navigation-compose-2.5.1/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/0ab4528a5992428d1a1df9fd5fa5fd32/transformed/navigation-runtime-ktx-2.5.1/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/e7a9ae8643ccdfaeccbdc0dd29a5bd04/transformed/navigation-runtime-2.5.1/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/e9086c8be1e8f404119a9c389fad136b/transformed/fragment-1.5.1/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/36fa6bda85154014b958750bad927db6/transformed/work-runtime-ktx-2.9.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/e0e190f901b66a8bf787b99808320379/transformed/loader-1.0.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/9df6a33e16d55502ddbe99f821ef8b43/transformed/jetified-coil-compose-2.5.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/c5b85e67526c3a580977937f10fb88bb/transformed/jetified-coil-compose-base-2.5.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/c02e1ba48b6b440facbfc6ab2e86ff5b/transformed/jetified-foundation-layout-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/fc80b4d3610f21089d7267135e6b2b3e/transformed/jetified-animation-core-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/eb7c55365afd554384887e42569e0f9c/transformed/jetified-animation-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/f5babddd41bd6ad8e0d0311934847b8b/transformed/jetified-ui-tooling-data-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/767d0f0292d87caa5e71489971377739/transformed/jetified-ui-tooling-preview-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/0fb52ae5d63935c854f3856a98cc5146/transformed/jetified-ui-unit-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/6bcb54fe427ebeca6c41f3b879f11cde/transformed/jetified-ui-graphics-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/1c847ff16fb64a8f67aa9a622febf9f4/transformed/jetified-ui-geometry-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/e7836d904d0e1e582872dfad919aeb0a/transformed/jetified-ui-test-manifest-1.5.4/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/5205d4823d5ef0f52658c987f77410d5/transformed/jetified-ui-util-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/428817272af0bf0117a388a3ec831849/transformed/jetified-ui-text-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/07667872a3cac4d8f15fd094c936d71c/transformed/jetified-ui-tooling-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/95011704ea19718bc476a2cb4a7a70d7/transformed/jetified-material-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/06b040d927e2695d21996130a918e405/transformed/jetified-material-icons-core-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/937526e9beed60687471bf01084e6044/transformed/jetified-material-ripple-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/74a9bb81711176cd1e3423b47b8cc31f/transformed/jetified-foundation-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/f764291afdd6be583a464d006c84fef9/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/fdf906ce96146de2c0336ab2c1eb95d3/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/e6f6d8e1b18c130f5995d8e5367b2922/transformed/jetified-lifecycle-service-2.6.2/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/862ceb9bde564a096485300b3c1b281b/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/731315b32cea3bb7d067eb4d62e5448b/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/485fdd39d70319a9bff0cbe8bb2da55a/transformed/navigation-common-ktx-2.5.1/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/e8a3bf408577fbfba494bfcc45b5666d/transformed/navigation-common-2.5.1/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/38a63400c9d1bd89b38a180ee6682f7c/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/0b066a24fb29e076d9972944174a9f99/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/aee40e63285dc1e72bb5832f4e7ddfb9/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/70faf91692e061bb7868c474ecf68762/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/09a6525d54618864698b2cc43ae43264/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/6de07c77206534e88a4b06bcfcfce652/transformed/jetified-coil-2.5.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/df9625199533241abb37bf133594689d/transformed/jetified-coil-base-2.5.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/3c4c5395837add982b9b9e87e4b30689/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/c71e093764772e4c7fd2a190552bb30e/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/420ae8e94764b729c03ddcd7719845f1/transformed/jetified-lifecycle-viewmodel-compose-2.6.2/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/2d0cbfe32c3ce37345d8029f7dd0b787/transformed/jetified-accompanist-drawablepainter-0.32.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/793dc1f73592f65146b5be98023f5db6/transformed/jetified-ui-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/919337311cdc09172dee91aee8783102/transformed/jetified-activity-ktx-1.8.1/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/6bd91e81109063a8131ae11c8b1041c1/transformed/jetified-activity-compose-1.8.1/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/97163246b663b8e6a922f1dbf967a0c5/transformed/jetified-activity-1.8.1/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/8424ef6cfb538a4047515d6d9a00fce7/transformed/media-1.6.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/a3c64c3f43938d89c4e97f020203da8a/transformed/recyclerview-1.3.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/7b8f9a9facbe9ba82ecf21d72653c441/transformed/viewpager-1.0.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/13cbc72f7c841c105cf9c99bb8de4395/transformed/customview-1.0.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/7b5bc41ed4c9f05c476bc6f990f606b8/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/23a44d781e8ff197c3ebab355a4ee609/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/2df311964911cd96ef56cc4f7ed10080/transformed/vectordrawable-1.1.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/f5dca615940e408ae8da5eab99a033cc/transformed/jetified-autofill-1.0.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/d23cf3110ef9fa66e4c7efa82f8af822/transformed/core-1.12.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/0878e406f7bfcc224592534623c89e53/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/7d5e606d177574fe6b0b05b0359b35c0/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/1dee2c1c3efe5c2d70937b5041e9974e/transformed/room-runtime-2.6.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/d9ece799691e8e8f098fb42e2d56660a/transformed/jetified-room-ktx-2.6.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/db3a46ec6d8a84f2073df693a004bc89/transformed/sqlite-framework-2.4.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/07932b472c1d44981b0695933e85bc48/transformed/sqlite-2.4.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/f58ed4578d7d6d27dc3d5fbb98091b54/transformed/jetified-runtime-saveable-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/4195d411b5a8ecef165e2398a2e0afbe/transformed/jetified-runtime-release/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/ce29c8a1d69829e68d84f2152519bc7e/transformed/jetified-annotation-experimental-1.3.1/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/fbdf367fed4f0bb4746e33c7112c10b3/transformed/core-runtime-2.2.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/3fae9463623c96ac111642c249d0cc85/transformed/exifinterface-1.3.6/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/8e729b91c080f02f82bfddb39c189109/transformed/interpolator-1.0.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/9df10aeaca73dd97a0335ecaad0115da/transformed/versionedparcelable-1.1.1/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/ac4920462ebdcd6a707e5a3433b05468/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/241013659bc62f56af4212bec8ee3e90/transformed/jetified-tracing-1.0.0/AndroidManifest.xml
+Loading library manifest /Users/minsupark/.gradle/caches/8.14/transforms/aab1d39f8f8fc71f7e4ebaf88bece1be/transformed/jetified-dagger-lint-aar-2.48/AndroidManifest.xml
+Merging main manifest /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml
+
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/a15d3f5b68827479246b6a4096f42a56/transformed/jetified-media3-ui-1.2.0/AndroidManifest.xml
+Merging manifest with lower [androidx.media3:media3-ui:1.2.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.media3:media3-ui:1.2.0] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/b811e932fc596a6963b45e334cfadf8d/transformed/jetified-media3-extractor-1.2.0/AndroidManifest.xml
+Merging manifest with lower [androidx.media3:media3-extractor:1.2.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.media3:media3-extractor:1.2.0] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/a7f36e887c6d1c3bd1144fe1679d0b1f/transformed/jetified-media3-container-1.2.0/AndroidManifest.xml
+Merging manifest with lower [androidx.media3:media3-container:1.2.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.media3:media3-container:1.2.0] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/b967bfc010ed8690fbbabaabb77ae810/transformed/jetified-media3-datasource-1.2.0/AndroidManifest.xml
+Merging manifest with lower [androidx.media3:media3-datasource:1.2.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.media3:media3-datasource:1.2.0] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/ecd7b334423cb83016b230f022708454/transformed/jetified-media3-decoder-1.2.0/AndroidManifest.xml
+Merging manifest with lower [androidx.media3:media3-decoder:1.2.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.media3:media3-decoder:1.2.0] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/85bc65d3026be107932bc5a8d4ff032d/transformed/jetified-media3-database-1.2.0/AndroidManifest.xml
+Merging manifest with lower [androidx.media3:media3-database:1.2.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.media3:media3-database:1.2.0] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/1e84e823c37eebd84a0fa3354293a6eb/transformed/jetified-media3-common-1.2.0/AndroidManifest.xml
+Merging manifest with lower [androidx.media3:media3-common:1.2.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.media3:media3-common:1.2.0] AndroidManifest.xml:20:5-44
+uses-permission#android.permission.ACCESS_NETWORK_STATE defined in both files...
+Merging uses-permission#android.permission.ACCESS_NETWORK_STATE with lower [androidx.media3:media3-common:1.2.0] AndroidManifest.xml:22:5-79
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/1287575a3acad730c74b445024957701/transformed/jetified-media3-exoplayer-1.2.0/AndroidManifest.xml
+Merging manifest with lower [androidx.media3:media3-exoplayer:1.2.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.media3:media3-exoplayer:1.2.0] AndroidManifest.xml:20:5-44
+uses-permission#android.permission.ACCESS_NETWORK_STATE defined in both files...
+Merging uses-permission#android.permission.ACCESS_NETWORK_STATE with lower [androidx.media3:media3-exoplayer:1.2.0] AndroidManifest.xml:22:5-79
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/de19cea25388de20c0e7263be1c786a5/transformed/jetified-hilt-navigation-compose-1.1.0/AndroidManifest.xml
+Merging manifest with lower [androidx.hilt:hilt-navigation-compose:1.1.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.hilt:hilt-navigation-compose:1.1.0] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/02a79eb773a5af7db7876bfd119428a0/transformed/jetified-hilt-navigation-1.1.0/AndroidManifest.xml
+Merging manifest with lower [androidx.hilt:hilt-navigation:1.1.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.hilt:hilt-navigation:1.1.0] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/10edd75b42d867ccf39e988e49b24ff5/transformed/jetified-hilt-android-2.48/AndroidManifest.xml
+Merging manifest with lower [com.google.dagger:hilt-android:2.48] AndroidManifest.xml:16:1-19:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.dagger:hilt-android:2.48] AndroidManifest.xml:18:3-42
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/de36f0f7700f7f419c87197e142f1498/transformed/jetified-material3-1.1.1/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.material3:material3:1.1.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.material3:material3:1.1.1] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/180da06029f5949ec2621288d5947925/transformed/jetified-navigation-compose-2.5.1/AndroidManifest.xml
+Merging manifest with lower [androidx.navigation:navigation-compose:2.5.1] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigation:navigation-compose:2.5.1] AndroidManifest.xml:20:5-22:41
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/0ab4528a5992428d1a1df9fd5fa5fd32/transformed/navigation-runtime-ktx-2.5.1/AndroidManifest.xml
+Merging manifest with lower [androidx.navigation:navigation-runtime-ktx:2.5.1] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigation:navigation-runtime-ktx:2.5.1] AndroidManifest.xml:20:5-22:41
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/e7a9ae8643ccdfaeccbdc0dd29a5bd04/transformed/navigation-runtime-2.5.1/AndroidManifest.xml
+Merging manifest with lower [androidx.navigation:navigation-runtime:2.5.1] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigation:navigation-runtime:2.5.1] AndroidManifest.xml:20:5-22:41
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/e9086c8be1e8f404119a9c389fad136b/transformed/fragment-1.5.1/AndroidManifest.xml
+Merging manifest with lower [androidx.fragment:fragment:1.5.1] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.fragment:fragment:1.5.1] AndroidManifest.xml:20:5-22:41
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/36fa6bda85154014b958750bad927db6/transformed/work-runtime-ktx-2.9.0/AndroidManifest.xml
+Merging manifest with lower [androidx.work:work-runtime-ktx:2.9.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.work:work-runtime-ktx:2.9.0] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml
+Merging manifest with lower [androidx.work:work-runtime:2.9.0] AndroidManifest.xml:17:1-145:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.work:work-runtime:2.9.0] AndroidManifest.xml:21:5-44
+Adopted [uses-permission: null]
+uses-permission#android.permission.ACCESS_NETWORK_STATE defined in both files...
+Merging uses-permission#android.permission.ACCESS_NETWORK_STATE with lower [androidx.work:work-runtime:2.9.0] AndroidManifest.xml:24:5-79
+Adopted [uses-permission: null]
+Adopted [uses-permission: null]
+application defined in both files...
+Merging application with lower [androidx.work:work-runtime:2.9.0] AndroidManifest.xml:28:5-143:19
+Adopted [provider: null]
+Adopted [service: null]
+Adopted [service: null]
+Adopted [service: null]
+Adopted [receiver: null]
+Adopted [receiver: null]
+Adopted [receiver: null]
+Adopted [receiver: null]
+Adopted [receiver: null]
+Adopted [receiver: null]
+Adopted [receiver: null]
+Adopted [receiver: null]
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/e0e190f901b66a8bf787b99808320379/transformed/loader-1.0.0/AndroidManifest.xml
+Merging manifest with lower [androidx.loader:loader:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.loader:loader:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/9df6a33e16d55502ddbe99f821ef8b43/transformed/jetified-coil-compose-2.5.0/AndroidManifest.xml
+Merging manifest with lower [io.coil-kt:coil-compose:2.5.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [io.coil-kt:coil-compose:2.5.0] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/c5b85e67526c3a580977937f10fb88bb/transformed/jetified-coil-compose-base-2.5.0/AndroidManifest.xml
+Merging manifest with lower [io.coil-kt:coil-compose-base:2.5.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [io.coil-kt:coil-compose-base:2.5.0] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/c02e1ba48b6b440facbfc6ab2e86ff5b/transformed/jetified-foundation-layout-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.foundation:foundation-layout-android:1.5.4] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.foundation:foundation-layout-android:1.5.4] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/fc80b4d3610f21089d7267135e6b2b3e/transformed/jetified-animation-core-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.animation:animation-core-android:1.5.4] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.animation:animation-core-android:1.5.4] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/eb7c55365afd554384887e42569e0f9c/transformed/jetified-animation-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.animation:animation-android:1.5.4] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.animation:animation-android:1.5.4] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/f5babddd41bd6ad8e0d0311934847b8b/transformed/jetified-ui-tooling-data-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.ui:ui-tooling-data-android:1.5.4] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.ui:ui-tooling-data-android:1.5.4] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/767d0f0292d87caa5e71489971377739/transformed/jetified-ui-tooling-preview-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.ui:ui-tooling-preview-android:1.5.4] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.ui:ui-tooling-preview-android:1.5.4] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/0fb52ae5d63935c854f3856a98cc5146/transformed/jetified-ui-unit-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.ui:ui-unit-android:1.5.4] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.ui:ui-unit-android:1.5.4] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/6bcb54fe427ebeca6c41f3b879f11cde/transformed/jetified-ui-graphics-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.ui:ui-graphics-android:1.5.4] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.ui:ui-graphics-android:1.5.4] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/1c847ff16fb64a8f67aa9a622febf9f4/transformed/jetified-ui-geometry-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.ui:ui-geometry-android:1.5.4] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.ui:ui-geometry-android:1.5.4] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/e7836d904d0e1e582872dfad919aeb0a/transformed/jetified-ui-test-manifest-1.5.4/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.ui:ui-test-manifest:1.5.4] AndroidManifest.xml:17:1-28:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.ui:ui-test-manifest:1.5.4] AndroidManifest.xml:20:5-44
+application defined in both files...
+Merging application with lower [androidx.compose.ui:ui-test-manifest:1.5.4] AndroidManifest.xml:22:5-26:19
+Adopted [activity: null]
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/5205d4823d5ef0f52658c987f77410d5/transformed/jetified-ui-util-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.ui:ui-util-android:1.5.4] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.ui:ui-util-android:1.5.4] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/428817272af0bf0117a388a3ec831849/transformed/jetified-ui-text-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.ui:ui-text-android:1.5.4] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.ui:ui-text-android:1.5.4] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/07667872a3cac4d8f15fd094c936d71c/transformed/jetified-ui-tooling-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.ui:ui-tooling-android:1.5.4] AndroidManifest.xml:17:1-28:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.ui:ui-tooling-android:1.5.4] AndroidManifest.xml:20:5-44
+application defined in both files...
+Merging application with lower [androidx.compose.ui:ui-tooling-android:1.5.4] AndroidManifest.xml:22:5-26:19
+Adopted [activity: null]
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/95011704ea19718bc476a2cb4a7a70d7/transformed/jetified-material-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.material:material-android:1.5.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.material:material-android:1.5.0] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/06b040d927e2695d21996130a918e405/transformed/jetified-material-icons-core-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.material:material-icons-core-android:1.5.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.material:material-icons-core-android:1.5.0] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/937526e9beed60687471bf01084e6044/transformed/jetified-material-ripple-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.material:material-ripple-android:1.5.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.material:material-ripple-android:1.5.0] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/74a9bb81711176cd1e3423b47b8cc31f/transformed/jetified-foundation-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.foundation:foundation-android:1.5.4] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.foundation:foundation-android:1.5.4] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/f764291afdd6be583a464d006c84fef9/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml
+Merging manifest with lower [androidx.emoji2:emoji2:1.4.0] AndroidManifest.xml:17:1-35:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.emoji2:emoji2:1.4.0] AndroidManifest.xml:21:5-44
+application defined in both files...
+Merging application with lower [androidx.emoji2:emoji2:1.4.0] AndroidManifest.xml:23:5-33:19
+provider#androidx.startup.InitializationProvider defined in both files...
+Merging provider#androidx.startup.InitializationProvider with lower [androidx.emoji2:emoji2:1.4.0] AndroidManifest.xml:24:9-32:20
+Adopted [meta-data: null]
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/fdf906ce96146de2c0336ab2c1eb95d3/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-process:2.6.2] AndroidManifest.xml:17:1-35:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-process:2.6.2] AndroidManifest.xml:21:5-44
+application defined in both files...
+Merging application with lower [androidx.lifecycle:lifecycle-process:2.6.2] AndroidManifest.xml:23:5-33:19
+provider#androidx.startup.InitializationProvider defined in both files...
+Merging provider#androidx.startup.InitializationProvider with lower [androidx.lifecycle:lifecycle-process:2.6.2] AndroidManifest.xml:24:9-32:20
+Adopted [meta-data: null]
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/e6f6d8e1b18c130f5995d8e5367b2922/transformed/jetified-lifecycle-service-2.6.2/AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-service:2.6.2] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-service:2.6.2] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/862ceb9bde564a096485300b3c1b281b/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-livedata:2.6.2] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-livedata:2.6.2] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/731315b32cea3bb7d067eb4d62e5448b/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-livedata-core:2.6.2] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-livedata-core:2.6.2] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/485fdd39d70319a9bff0cbe8bb2da55a/transformed/navigation-common-ktx-2.5.1/AndroidManifest.xml
+Merging manifest with lower [androidx.navigation:navigation-common-ktx:2.5.1] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigation:navigation-common-ktx:2.5.1] AndroidManifest.xml:20:5-22:41
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/e8a3bf408577fbfba494bfcc45b5666d/transformed/navigation-common-2.5.1/AndroidManifest.xml
+Merging manifest with lower [androidx.navigation:navigation-common:2.5.1] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigation:navigation-common:2.5.1] AndroidManifest.xml:20:5-22:41
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/38a63400c9d1bd89b38a180ee6682f7c/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/0b066a24fb29e076d9972944174a9f99/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/aee40e63285dc1e72bb5832f4e7ddfb9/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml
+Merging manifest with lower [androidx.savedstate:savedstate-ktx:1.2.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.savedstate:savedstate-ktx:1.2.1] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/70faf91692e061bb7868c474ecf68762/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml
+Merging manifest with lower [androidx.savedstate:savedstate:1.2.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.savedstate:savedstate:1.2.1] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/09a6525d54618864698b2cc43ae43264/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-viewmodel:2.6.2] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-viewmodel:2.6.2] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/6de07c77206534e88a4b06bcfcfce652/transformed/jetified-coil-2.5.0/AndroidManifest.xml
+Merging manifest with lower [io.coil-kt:coil:2.5.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [io.coil-kt:coil:2.5.0] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/df9625199533241abb37bf133594689d/transformed/jetified-coil-base-2.5.0/AndroidManifest.xml
+Merging manifest with lower [io.coil-kt:coil-base:2.5.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [io.coil-kt:coil-base:2.5.0] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/3c4c5395837add982b9b9e87e4b30689/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-runtime:2.6.2] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-runtime:2.6.2] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/c71e093764772e4c7fd2a190552bb30e/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/420ae8e94764b729c03ddcd7719845f1/transformed/jetified-lifecycle-viewmodel-compose-2.6.2/AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/2d0cbfe32c3ce37345d8029f7dd0b787/transformed/jetified-accompanist-drawablepainter-0.32.0/AndroidManifest.xml
+Merging manifest with lower [com.google.accompanist:accompanist-drawablepainter:0.32.0] AndroidManifest.xml:17:1-23:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.accompanist:accompanist-drawablepainter:0.32.0] AndroidManifest.xml:21:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/793dc1f73592f65146b5be98023f5db6/transformed/jetified-ui-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.ui:ui-android:1.5.4] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.ui:ui-android:1.5.4] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/919337311cdc09172dee91aee8783102/transformed/jetified-activity-ktx-1.8.1/AndroidManifest.xml
+Merging manifest with lower [androidx.activity:activity-ktx:1.8.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.activity:activity-ktx:1.8.1] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/6bd91e81109063a8131ae11c8b1041c1/transformed/jetified-activity-compose-1.8.1/AndroidManifest.xml
+Merging manifest with lower [androidx.activity:activity-compose:1.8.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.activity:activity-compose:1.8.1] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/97163246b663b8e6a922f1dbf967a0c5/transformed/jetified-activity-1.8.1/AndroidManifest.xml
+Merging manifest with lower [androidx.activity:activity:1.8.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.activity:activity:1.8.1] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/8424ef6cfb538a4047515d6d9a00fce7/transformed/media-1.6.0/AndroidManifest.xml
+Merging manifest with lower [androidx.media:media:1.6.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.media:media:1.6.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/a3c64c3f43938d89c4e97f020203da8a/transformed/recyclerview-1.3.0/AndroidManifest.xml
+Merging manifest with lower [androidx.recyclerview:recyclerview:1.3.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.recyclerview:recyclerview:1.3.0] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/7b8f9a9facbe9ba82ecf21d72653c441/transformed/viewpager-1.0.0/AndroidManifest.xml
+Merging manifest with lower [androidx.viewpager:viewpager:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.viewpager:viewpager:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/13cbc72f7c841c105cf9c99bb8de4395/transformed/customview-1.0.0/AndroidManifest.xml
+Merging manifest with lower [androidx.customview:customview:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.customview:customview:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/7b5bc41ed4c9f05c476bc6f990f606b8/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml
+Merging manifest with lower [androidx.appcompat:appcompat-resources:1.6.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.appcompat:appcompat-resources:1.6.1] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/23a44d781e8ff197c3ebab355a4ee609/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml
+Merging manifest with lower [androidx.vectordrawable:vectordrawable-animated:1.1.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.vectordrawable:vectordrawable-animated:1.1.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/2df311964911cd96ef56cc4f7ed10080/transformed/vectordrawable-1.1.0/AndroidManifest.xml
+Merging manifest with lower [androidx.vectordrawable:vectordrawable:1.1.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.vectordrawable:vectordrawable:1.1.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/f5dca615940e408ae8da5eab99a033cc/transformed/jetified-autofill-1.0.0/AndroidManifest.xml
+Merging manifest with lower [androidx.autofill:autofill:1.0.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.autofill:autofill:1.0.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/d23cf3110ef9fa66e4c7efa82f8af822/transformed/core-1.12.0/AndroidManifest.xml
+Merging manifest with lower [androidx.core:core:1.12.0] AndroidManifest.xml:17:1-30:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.core:core:1.12.0] AndroidManifest.xml:20:5-44
+Adopted [permission: null]
+Adopted [uses-permission: null]
+application defined in both files...
+Merging application with lower [androidx.core:core:1.12.0] AndroidManifest.xml:28:5-89
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/0878e406f7bfcc224592534623c89e53/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml
+Merging manifest with lower [androidx.customview:customview-poolingcontainer:1.0.0] AndroidManifest.xml:17:1-23:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.customview:customview-poolingcontainer:1.0.0] AndroidManifest.xml:20:5-21:38
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/7d5e606d177574fe6b0b05b0359b35c0/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml
+Merging manifest with lower [androidx.core:core-ktx:1.12.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.core:core-ktx:1.12.0] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/1dee2c1c3efe5c2d70937b5041e9974e/transformed/room-runtime-2.6.0/AndroidManifest.xml
+Merging manifest with lower [androidx.room:room-runtime:2.6.0] AndroidManifest.xml:17:1-31:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.room:room-runtime:2.6.0] AndroidManifest.xml:21:5-44
+application defined in both files...
+Merging application with lower [androidx.room:room-runtime:2.6.0] AndroidManifest.xml:23:5-29:19
+Adopted [service: null]
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/d9ece799691e8e8f098fb42e2d56660a/transformed/jetified-room-ktx-2.6.0/AndroidManifest.xml
+Merging manifest with lower [androidx.room:room-ktx:2.6.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.room:room-ktx:2.6.0] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/db3a46ec6d8a84f2073df693a004bc89/transformed/sqlite-framework-2.4.0/AndroidManifest.xml
+Merging manifest with lower [androidx.sqlite:sqlite-framework:2.4.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.sqlite:sqlite-framework:2.4.0] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/07932b472c1d44981b0695933e85bc48/transformed/sqlite-2.4.0/AndroidManifest.xml
+Merging manifest with lower [androidx.sqlite:sqlite:2.4.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.sqlite:sqlite:2.4.0] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/f58ed4578d7d6d27dc3d5fbb98091b54/transformed/jetified-runtime-saveable-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.runtime:runtime-saveable-android:1.5.4] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.runtime:runtime-saveable-android:1.5.4] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/4195d411b5a8ecef165e2398a2e0afbe/transformed/jetified-runtime-release/AndroidManifest.xml
+Merging manifest with lower [androidx.compose.runtime:runtime-android:1.5.4] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.runtime:runtime-android:1.5.4] AndroidManifest.xml:5:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/ce29c8a1d69829e68d84f2152519bc7e/transformed/jetified-annotation-experimental-1.3.1/AndroidManifest.xml
+Merging manifest with lower [androidx.annotation:annotation-experimental:1.3.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.annotation:annotation-experimental:1.3.1] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/fbdf367fed4f0bb4746e33c7112c10b3/transformed/core-runtime-2.2.0/AndroidManifest.xml
+Merging manifest with lower [androidx.arch.core:core-runtime:2.2.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.arch.core:core-runtime:2.2.0] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/3fae9463623c96ac111642c249d0cc85/transformed/exifinterface-1.3.6/AndroidManifest.xml
+Merging manifest with lower [androidx.exifinterface:exifinterface:1.3.6] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.exifinterface:exifinterface:1.3.6] AndroidManifest.xml:20:5-22:41
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/8e729b91c080f02f82bfddb39c189109/transformed/interpolator-1.0.0/AndroidManifest.xml
+Merging manifest with lower [androidx.interpolator:interpolator:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.interpolator:interpolator:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/9df10aeaca73dd97a0335ecaad0115da/transformed/versionedparcelable-1.1.1/AndroidManifest.xml
+Merging manifest with lower [androidx.versionedparcelable:versionedparcelable:1.1.1] AndroidManifest.xml:17:1-27:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.versionedparcelable:versionedparcelable:1.1.1] AndroidManifest.xml:20:5-22:41
+application defined in both files...
+Merging application with lower [androidx.versionedparcelable:versionedparcelable:1.1.1] AndroidManifest.xml:24:5-25:19
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml
+Merging manifest with lower [androidx.profileinstaller:profileinstaller:1.3.1] AndroidManifest.xml:17:1-55:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.profileinstaller:profileinstaller:1.3.1] AndroidManifest.xml:21:5-44
+application defined in both files...
+Merging application with lower [androidx.profileinstaller:profileinstaller:1.3.1] AndroidManifest.xml:23:5-53:19
+provider#androidx.startup.InitializationProvider defined in both files...
+Merging provider#androidx.startup.InitializationProvider with lower [androidx.profileinstaller:profileinstaller:1.3.1] AndroidManifest.xml:24:9-32:20
+Adopted [meta-data: null]
+Adopted [receiver: null]
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/ac4920462ebdcd6a707e5a3433b05468/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml
+Merging manifest with lower [androidx.startup:startup-runtime:1.1.1] AndroidManifest.xml:17:1-33:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.startup:startup-runtime:1.1.1] AndroidManifest.xml:21:5-23:41
+application defined in both files...
+Merging application with lower [androidx.startup:startup-runtime:1.1.1] AndroidManifest.xml:25:5-31:19
+provider#androidx.startup.InitializationProvider defined in both files...
+Merging provider#androidx.startup.InitializationProvider with lower [androidx.startup:startup-runtime:1.1.1] AndroidManifest.xml:26:9-30:34
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/241013659bc62f56af4212bec8ee3e90/transformed/jetified-tracing-1.0.0/AndroidManifest.xml
+Merging manifest with lower [androidx.tracing:tracing:1.0.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.tracing:tracing:1.0.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest /Users/minsupark/.gradle/caches/8.14/transforms/aab1d39f8f8fc71f7e4ebaf88bece1be/transformed/jetified-dagger-lint-aar-2.48/AndroidManifest.xml
+Merging manifest with lower [com.google.dagger:dagger-lint-aar:2.48] AndroidManifest.xml:16:1-19:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.dagger:dagger-lint-aar:2.48] AndroidManifest.xml:18:3-42
+Merging result: SUCCESS
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.didapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:5:5-67
+11-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:6:5-79
+12-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:6:22-76
+13    <uses-permission
+13-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:7:5-107
+14        android:name="android.permission.READ_EXTERNAL_STORAGE"
+14-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:7:22-77
+15        android:maxSdkVersion="32" />
+15-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:7:78-104
+16    <uses-permission
+16-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:8:5-108
+17        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+17-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:8:22-78
+18        android:maxSdkVersion="28" />
+18-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:8:79-105
+19    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+19-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:9:5-76
+19-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:9:22-73
+20    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+20-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:10:5-75
+20-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:10:22-72
+21    <uses-permission android:name="android.permission.WAKE_LOCK" />
+21-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:23:5-68
+21-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:23:22-65
+22    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+22-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:25:5-81
+22-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:25:22-78
+23    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+23-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:26:5-77
+23-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:26:22-74
+24
+25    <permission
+25-->[androidx.core:core:1.12.0] /Users/minsupark/.gradle/caches/8.14/transforms/d23cf3110ef9fa66e4c7efa82f8af822/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+26        android:name="com.example.didapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+26-->[androidx.core:core:1.12.0] /Users/minsupark/.gradle/caches/8.14/transforms/d23cf3110ef9fa66e4c7efa82f8af822/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+27        android:protectionLevel="signature" />
+27-->[androidx.core:core:1.12.0] /Users/minsupark/.gradle/caches/8.14/transforms/d23cf3110ef9fa66e4c7efa82f8af822/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+28
+29    <uses-permission android:name="com.example.didapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+29-->[androidx.core:core:1.12.0] /Users/minsupark/.gradle/caches/8.14/transforms/d23cf3110ef9fa66e4c7efa82f8af822/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+29-->[androidx.core:core:1.12.0] /Users/minsupark/.gradle/caches/8.14/transforms/d23cf3110ef9fa66e4c7efa82f8af822/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+30
+31    <application
+31-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:12:5-32:19
+32        android:name="com.example.didapp.DidApplication"
+32-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:13:9-39
+33        android:allowBackup="true"
+33-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:14:9-35
+34        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+34-->[androidx.core:core:1.12.0] /Users/minsupark/.gradle/caches/8.14/transforms/d23cf3110ef9fa66e4c7efa82f8af822/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+35        android:dataExtractionRules="@xml/data_extraction_rules"
+35-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:15:9-65
+36        android:debuggable="true"
+37        android:extractNativeLibs="false"
+38        android:fullBackupContent="@xml/backup_rules"
+38-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:16:9-54
+39        android:icon="@mipmap/ic_launcher"
+39-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:17:9-43
+40        android:label="@string/app_name"
+40-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:18:9-41
+41        android:roundIcon="@mipmap/ic_launcher_round"
+41-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:19:9-54
+42        android:supportsRtl="true"
+42-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:20:9-35
+43        android:theme="@style/Theme.DidApp" >
+43-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:21:9-44
+44        <activity
+44-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:23:9-31:20
+45            android:name="com.example.didapp.ui.MainActivity"
+45-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:24:13-44
+46            android:exported="true"
+46-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:25:13-36
+47            android:theme="@style/Theme.DidApp" >
+47-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:26:13-48
+48            <intent-filter>
+48-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:27:13-30:29
+49                <action android:name="android.intent.action.MAIN" />
+49-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:28:17-69
+49-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:28:25-66
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:29:17-77
+51-->/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/AndroidManifest.xml:29:27-74
+52            </intent-filter>
+53        </activity>
+54
+55        <provider
+55-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:29:9-37:20
+56            android:name="androidx.startup.InitializationProvider"
+56-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:30:13-67
+57            android:authorities="com.example.didapp.androidx-startup"
+57-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:31:13-68
+58            android:exported="false" >
+58-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:32:13-37
+59            <meta-data
+59-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:34:13-36:52
+60                android:name="androidx.work.WorkManagerInitializer"
+60-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:35:17-68
+61                android:value="androidx.startup" />
+61-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:36:17-49
+62            <meta-data
+62-->[androidx.emoji2:emoji2:1.4.0] /Users/minsupark/.gradle/caches/8.14/transforms/f764291afdd6be583a464d006c84fef9/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+63                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+63-->[androidx.emoji2:emoji2:1.4.0] /Users/minsupark/.gradle/caches/8.14/transforms/f764291afdd6be583a464d006c84fef9/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:30:17-75
+64                android:value="androidx.startup" />
+64-->[androidx.emoji2:emoji2:1.4.0] /Users/minsupark/.gradle/caches/8.14/transforms/f764291afdd6be583a464d006c84fef9/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:31:17-49
+65            <meta-data
+65-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/minsupark/.gradle/caches/8.14/transforms/fdf906ce96146de2c0336ab2c1eb95d3/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+66                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+66-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/minsupark/.gradle/caches/8.14/transforms/fdf906ce96146de2c0336ab2c1eb95d3/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+67                android:value="androidx.startup" />
+67-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/minsupark/.gradle/caches/8.14/transforms/fdf906ce96146de2c0336ab2c1eb95d3/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+68            <meta-data
+68-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+69                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+69-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+70                android:value="androidx.startup" />
+70-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+71        </provider>
+72
+73        <service
+73-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:39:9-45:35
+74            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+74-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:40:13-88
+75            android:directBootAware="false"
+75-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:41:13-44
+76            android:enabled="@bool/enable_system_alarm_service_default"
+76-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:42:13-72
+77            android:exported="false" />
+77-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:43:13-37
+78        <service
+78-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:46:9-52:35
+79            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+79-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:47:13-84
+80            android:directBootAware="false"
+80-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:48:13-44
+81            android:enabled="@bool/enable_system_job_service_default"
+81-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:49:13-70
+82            android:exported="true"
+82-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:50:13-36
+83            android:permission="android.permission.BIND_JOB_SERVICE" />
+83-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:51:13-69
+84        <service
+84-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:53:9-59:35
+85            android:name="androidx.work.impl.foreground.SystemForegroundService"
+85-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:54:13-81
+86            android:directBootAware="false"
+86-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:55:13-44
+87            android:enabled="@bool/enable_system_foreground_service_default"
+87-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:56:13-77
+88            android:exported="false" />
+88-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:57:13-37
+89
+90        <receiver
+90-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:61:9-66:35
+91            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+91-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:62:13-88
+92            android:directBootAware="false"
+92-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:63:13-44
+93            android:enabled="true"
+93-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:64:13-35
+94            android:exported="false" />
+94-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:65:13-37
+95        <receiver
+95-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:67:9-77:20
+96            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+96-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:68:13-106
+97            android:directBootAware="false"
+97-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:69:13-44
+98            android:enabled="false"
+98-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:70:13-36
+99            android:exported="false" >
+99-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:71:13-37
+100            <intent-filter>
+100-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:73:13-76:29
+101                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+101-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:74:17-87
+101-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:74:25-84
+102                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+102-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:75:17-90
+102-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:75:25-87
+103            </intent-filter>
+104        </receiver>
+105        <receiver
+105-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:78:9-88:20
+106            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+106-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:79:13-104
+107            android:directBootAware="false"
+107-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:80:13-44
+108            android:enabled="false"
+108-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:81:13-36
+109            android:exported="false" >
+109-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:82:13-37
+110            <intent-filter>
+110-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:84:13-87:29
+111                <action android:name="android.intent.action.BATTERY_OKAY" />
+111-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:85:17-77
+111-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:85:25-74
+112                <action android:name="android.intent.action.BATTERY_LOW" />
+112-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:86:17-76
+112-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:86:25-73
+113            </intent-filter>
+114        </receiver>
+115        <receiver
+115-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:89:9-99:20
+116            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+116-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:90:13-104
+117            android:directBootAware="false"
+117-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:91:13-44
+118            android:enabled="false"
+118-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:92:13-36
+119            android:exported="false" >
+119-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:93:13-37
+120            <intent-filter>
+120-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:95:13-98:29
+121                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+121-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:96:17-83
+121-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:96:25-80
+122                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+122-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:97:17-82
+122-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:97:25-79
+123            </intent-filter>
+124        </receiver>
+125        <receiver
+125-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:100:9-109:20
+126            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+126-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:101:13-103
+127            android:directBootAware="false"
+127-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:102:13-44
+128            android:enabled="false"
+128-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:103:13-36
+129            android:exported="false" >
+129-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:104:13-37
+130            <intent-filter>
+130-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:106:13-108:29
+131                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+131-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:107:17-79
+131-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:107:25-76
+132            </intent-filter>
+133        </receiver>
+134        <receiver
+134-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:110:9-121:20
+135            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+135-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:111:13-88
+136            android:directBootAware="false"
+136-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:112:13-44
+137            android:enabled="false"
+137-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:113:13-36
+138            android:exported="false" >
+138-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:114:13-37
+139            <intent-filter>
+139-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:116:13-120:29
+140                <action android:name="android.intent.action.BOOT_COMPLETED" />
+140-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:117:17-79
+140-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:117:25-76
+141                <action android:name="android.intent.action.TIME_SET" />
+141-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:118:17-73
+141-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:118:25-70
+142                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+142-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:119:17-81
+142-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:119:25-78
+143            </intent-filter>
+144        </receiver>
+145        <receiver
+145-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:122:9-131:20
+146            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+146-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:123:13-99
+147            android:directBootAware="false"
+147-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:124:13-44
+148            android:enabled="@bool/enable_system_alarm_service_default"
+148-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:125:13-72
+149            android:exported="false" >
+149-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:126:13-37
+150            <intent-filter>
+150-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:128:13-130:29
+151                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+151-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:129:17-98
+151-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:129:25-95
+152            </intent-filter>
+153        </receiver>
+154        <receiver
+154-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:132:9-142:20
+155            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+155-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:133:13-78
+156            android:directBootAware="false"
+156-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:134:13-44
+157            android:enabled="true"
+157-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:135:13-35
+158            android:exported="true"
+158-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:136:13-36
+159            android:permission="android.permission.DUMP" >
+159-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:137:13-57
+160            <intent-filter>
+160-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:139:13-141:29
+161                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+161-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:140:17-88
+161-->[androidx.work:work-runtime:2.9.0] /Users/minsupark/.gradle/caches/8.14/transforms/157cdb9f9cc7528595ea98c4ce74836a/transformed/work-runtime-2.9.0/AndroidManifest.xml:140:25-85
+162            </intent-filter>
+163        </receiver>
+164
+165        <activity
+165-->[androidx.compose.ui:ui-test-manifest:1.5.4] /Users/minsupark/.gradle/caches/8.14/transforms/e7836d904d0e1e582872dfad919aeb0a/transformed/jetified-ui-test-manifest-1.5.4/AndroidManifest.xml:23:9-25:39
+166            android:name="androidx.activity.ComponentActivity"
+166-->[androidx.compose.ui:ui-test-manifest:1.5.4] /Users/minsupark/.gradle/caches/8.14/transforms/e7836d904d0e1e582872dfad919aeb0a/transformed/jetified-ui-test-manifest-1.5.4/AndroidManifest.xml:24:13-63
+167            android:exported="true" />
+167-->[androidx.compose.ui:ui-test-manifest:1.5.4] /Users/minsupark/.gradle/caches/8.14/transforms/e7836d904d0e1e582872dfad919aeb0a/transformed/jetified-ui-test-manifest-1.5.4/AndroidManifest.xml:25:13-36
+168        <activity
+168-->[androidx.compose.ui:ui-tooling-android:1.5.4] /Users/minsupark/.gradle/caches/8.14/transforms/07667872a3cac4d8f15fd094c936d71c/transformed/jetified-ui-tooling-release/AndroidManifest.xml:23:9-25:39
+169            android:name="androidx.compose.ui.tooling.PreviewActivity"
+169-->[androidx.compose.ui:ui-tooling-android:1.5.4] /Users/minsupark/.gradle/caches/8.14/transforms/07667872a3cac4d8f15fd094c936d71c/transformed/jetified-ui-tooling-release/AndroidManifest.xml:24:13-71
+170            android:exported="true" />
+170-->[androidx.compose.ui:ui-tooling-android:1.5.4] /Users/minsupark/.gradle/caches/8.14/transforms/07667872a3cac4d8f15fd094c936d71c/transformed/jetified-ui-tooling-release/AndroidManifest.xml:25:13-36
+171
+172        <service
+172-->[androidx.room:room-runtime:2.6.0] /Users/minsupark/.gradle/caches/8.14/transforms/1dee2c1c3efe5c2d70937b5041e9974e/transformed/room-runtime-2.6.0/AndroidManifest.xml:24:9-28:63
+173            android:name="androidx.room.MultiInstanceInvalidationService"
+173-->[androidx.room:room-runtime:2.6.0] /Users/minsupark/.gradle/caches/8.14/transforms/1dee2c1c3efe5c2d70937b5041e9974e/transformed/room-runtime-2.6.0/AndroidManifest.xml:25:13-74
+174            android:directBootAware="true"
+174-->[androidx.room:room-runtime:2.6.0] /Users/minsupark/.gradle/caches/8.14/transforms/1dee2c1c3efe5c2d70937b5041e9974e/transformed/room-runtime-2.6.0/AndroidManifest.xml:26:13-43
+175            android:exported="false" />
+175-->[androidx.room:room-runtime:2.6.0] /Users/minsupark/.gradle/caches/8.14/transforms/1dee2c1c3efe5c2d70937b5041e9974e/transformed/room-runtime-2.6.0/AndroidManifest.xml:27:13-37
+176
+177        <receiver
+177-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+178            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+178-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+179            android:directBootAware="false"
+179-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+180            android:enabled="true"
+180-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+181            android:exported="true"
+181-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+182            android:permission="android.permission.DUMP" >
+182-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+183            <intent-filter>
+183-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+184                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+184-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+184-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+185            </intent-filter>
+186            <intent-filter>
+186-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+187                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+187-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+187-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+188            </intent-filter>
+189            <intent-filter>
+189-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+190                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+190-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+190-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+191            </intent-filter>
+192            <intent-filter>
+192-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+193                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+193-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+193-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/minsupark/.gradle/caches/8.14/transforms/8e937f39258fe261b7cbaa9465279a84/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+194            </intent-filter>
+195        </receiver>
+196    </application>
+197
+198</manifest>
+
+Merged manifest saved to /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml
+Resolve mutations for :app:processDebugManifest (Thread[Execution worker Thread 5,5,main]) started.
+:app:processDebugManifest (Thread[Execution worker Thread 5,5,main]) started.
+
+> Task :app:processDebugManifest
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_manifests/debug
+Caching disabled for task ':app:processDebugManifest' because:
+  Build cache is disabled
+Task ':app:processDebugManifest' is not up-to-date because:
+  Output property 'multiApkManifestOutputDirectory' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_manifests/debug has been removed.
+  Output property 'multiApkManifestOutputDirectory' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml has been removed.
+  Output property 'multiApkManifestOutputDirectory' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_manifests/debug/output-metadata.json has been removed.
+Resolve mutations for :app:processDebugManifestForPackage (Thread[Execution worker Thread 5,5,main]) started.
+:app:processDebugManifestForPackage (Thread[Execution worker Thread 5,5,main]) started.
+Resolve mutations for :app:javaPreCompileDebug (Thread[Execution worker Thread 3,5,main]) started.
+:app:javaPreCompileDebug (Thread[Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:mergeDebugShaders (Thread[Execution worker Thread 7,5,main]) started.
+:app:mergeDebugShaders (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :app:mergeDebugShaders
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_shaders/debug/out
+Caching disabled for task ':app:mergeDebugShaders' because:
+  Build cache is disabled
+Task ':app:mergeDebugShaders' is not up-to-date because:
+  Output property 'outputDir' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_shaders/debug/out has been removed.
+The input changes require a full rebuild for incremental task ':app:mergeDebugShaders'.
+Resolve mutations for :app:compileDebugShaders (Thread[Execution worker Thread 7,5,main]) started.
+:app:compileDebugShaders (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :app:compileDebugShaders NO-SOURCE
+Skipping task ':app:compileDebugShaders' as it has no source files and no previous output files.
+Resolve mutations for :app:generateDebugAssets (Thread[Execution worker Thread 7,5,main]) started.
+:app:generateDebugAssets (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :app:generateDebugAssets UP-TO-DATE
+Skipping task ':app:generateDebugAssets' as it has no actions.
+Resolve mutations for :app:mergeDebugAssets (Thread[Execution worker Thread 7,5,main]) started.
+:app:mergeDebugAssets (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :app:javaPreCompileDebug
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/annotation_processor_list/debug/annotationProcessors.json
+Caching disabled for task ':app:javaPreCompileDebug' because:
+  Build cache is disabled
+Task ':app:javaPreCompileDebug' is not up-to-date because:
+  Output property 'annotationProcessorListFile' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/annotation_processor_list/debug/annotationProcessors.json has been removed.
+
+> Task :app:mergeDebugAssets
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/assets/debug
+Caching disabled for task ':app:mergeDebugAssets' because:
+  Build cache is disabled
+Task ':app:mergeDebugAssets' is not up-to-date because:
+  Output property 'outputDir' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/assets/debug has been removed.
+The input changes require a full rebuild for incremental task ':app:mergeDebugAssets'.
+Resolve mutations for :app:compressDebugAssets (Thread[Execution worker Thread 7,5,main]) started.
+:app:compressDebugAssets (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :app:compressDebugAssets
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/compressed_assets/debug/out
+Caching disabled for task ':app:compressDebugAssets' because:
+  Build cache is disabled
+Task ':app:compressDebugAssets' is not up-to-date because:
+  Output property 'outputDir' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/compressed_assets/debug/out has been removed.
+The input changes require a full rebuild for incremental task ':app:compressDebugAssets'.
+Resolve mutations for :app:desugarDebugFileDependencies (Thread[Execution worker Thread 7,5,main]) started.
+:app:desugarDebugFileDependencies (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :app:desugarDebugFileDependencies
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/global_synthetics_file_lib/debug
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/external_file_lib_dex_archives/debug
+Caching disabled for task ':app:desugarDebugFileDependencies' because:
+  Build cache is disabled
+Task ':app:desugarDebugFileDependencies' is not up-to-date because:
+  Output property 'outputDirectory' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/external_file_lib_dex_archives/debug has been removed.
+  Output property 'outputGlobalSynthetics' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/global_synthetics_file_lib/debug has been removed.
+Resolve mutations for :app:checkDebugDuplicateClasses (Thread[Execution worker Thread 7,5,main]) started.
+:app:checkDebugDuplicateClasses (Thread[Execution worker Thread 7,5,main]) started.
+Resolve mutations for :app:mergeDebugJniLibFolders (Thread[Execution worker Thread 11,5,main]) started.
+:app:mergeDebugJniLibFolders (Thread[Execution worker Thread 11,5,main]) started.
+
+> Task :app:mergeDebugJniLibFolders
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_jni_libs/debug/out
+Caching disabled for task ':app:mergeDebugJniLibFolders' because:
+  Build cache is disabled
+Task ':app:mergeDebugJniLibFolders' is not up-to-date because:
+  Output property 'outputDir' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/merged_jni_libs/debug/out has been removed.
+The input changes require a full rebuild for incremental task ':app:mergeDebugJniLibFolders'.
+Resolve mutations for :app:mergeDebugNativeLibs (Thread[Execution worker Thread 11,5,main]) started.
+:app:mergeDebugNativeLibs (Thread[Execution worker Thread 11,5,main]) started.
+
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+Skipping task ':app:mergeDebugNativeLibs' as it has no source files and no previous output files.
+Resolve mutations for :app:stripDebugDebugSymbols (Thread[Execution worker Thread 11,5,main]) started.
+:app:stripDebugDebugSymbols (Thread[Execution worker Thread 11,5,main]) started.
+
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+Skipping task ':app:stripDebugDebugSymbols' as it has no source files and no previous output files.
+Resolve mutations for :app:validateSigningDebug (Thread[Execution worker Thread 11,5,main]) started.
+:app:validateSigningDebug (Thread[Execution worker Thread 11,5,main]) started.
+
+> Task :app:validateSigningDebug
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/validate_signing_config/debug
+Caching disabled for task ':app:validateSigningDebug' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:validateSigningDebug' is not up-to-date because:
+  Output property 'dummyOutputDirectory' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/validate_signing_config/debug has been removed.
+Resolve mutations for :app:writeDebugAppMetadata (Thread[Execution worker Thread 11,5,main]) started.
+:app:writeDebugAppMetadata (Thread[Execution worker Thread 11,5,main]) started.
+
+> Task :app:writeDebugAppMetadata
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/app_metadata/debug/app-metadata.properties
+Caching disabled for task ':app:writeDebugAppMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:writeDebugAppMetadata' is not up-to-date because:
+  Output property 'outputFile' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/app_metadata/debug/app-metadata.properties has been removed.
+Resolve mutations for :app:writeDebugSigningConfigVersions (Thread[Execution worker Thread 11,5,main]) started.
+:app:writeDebugSigningConfigVersions (Thread[Execution worker Thread 11,5,main]) started.
+
+> Task :app:writeDebugSigningConfigVersions
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/signing_config_versions/debug/signing-config-versions.json
+Caching disabled for task ':app:writeDebugSigningConfigVersions' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:writeDebugSigningConfigVersions' is not up-to-date because:
+  Output property 'outputFile' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/signing_config_versions/debug/signing-config-versions.json has been removed.
+
+> Task :app:processDebugManifestForPackage
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/packaged_manifests/debug
+Custom actions are attached to task ':app:processDebugManifestForPackage'.
+Caching disabled for task ':app:processDebugManifestForPackage' because:
+  Build cache is disabled
+Task ':app:processDebugManifestForPackage' is not up-to-date because:
+  Output property 'packageManifests' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/packaged_manifests/debug has been removed.
+  Output property 'packageManifests' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml has been removed.
+  Output property 'packageManifests' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/packaged_manifests/debug/output-metadata.json has been removed.
+Resolve mutations for :app:processDebugResources (Thread[Execution worker Thread 5,5,main]) started.
+:app:processDebugResources (Thread[Execution worker Thread 5,5,main]) started.
+
+> Task :app:checkDebugDuplicateClasses
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/duplicate_classes_check/debug
+Caching disabled for task ':app:checkDebugDuplicateClasses' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:checkDebugDuplicateClasses' is not up-to-date because:
+  Output property 'dummyOutputDirectory' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/duplicate_classes_check/debug has been removed.
+Resolve mutations for :app:mergeExtDexDebug (Thread[Execution worker Thread 7,5,main]) started.
+:app:mergeExtDexDebug (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :app:mergeExtDexDebug UP-TO-DATE
+Caching disabled for task ':app:mergeExtDexDebug' because:
+  Build cache is disabled
+Skipping task ':app:mergeExtDexDebug' as it is up-to-date.
+Resolve mutations for :app:mergeLibDexDebug (Thread[Execution worker Thread 7,5,main]) started.
+:app:mergeLibDexDebug (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :app:mergeLibDexDebug
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/dex/debug/mergeLibDexDebug
+Caching disabled for task ':app:mergeLibDexDebug' because:
+  Build cache is disabled
+Task ':app:mergeLibDexDebug' is not up-to-date because:
+  Output property 'outputDir' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/dex/debug/mergeLibDexDebug has been removed.
+  Output property 'outputDir' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/dex/debug/mergeLibDexDebug/0 has been removed.
+  Output property 'outputDir' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/dex/debug/mergeLibDexDebug/1 has been removed.
+  and more...
+The input changes require a full rebuild for incremental task ':app:mergeLibDexDebug'.
+
+> Task :app:processDebugResources
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/runtime_symbol_list/debug/R.txt
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar
+Deleting stale output file: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/processed_res/debug/out
+Caching disabled for task ':app:processDebugResources' because:
+  Build cache is disabled
+Task ':app:processDebugResources' is not up-to-date because:
+  Output property 'RClassOutputJar' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar has been removed.
+  Output property 'resPackageOutputFolder' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/processed_res/debug/out has been removed.
+  Output property 'resPackageOutputFolder' file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/processed_res/debug/out/output-metadata.json has been removed.
+  and more...
+The input changes require a full rebuild for incremental task ':app:processDebugResources'.
+AAPT2 aapt2-8.2.2-10154469-osx Daemon #0: starting
+Aapt output file /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/intermediates/processed_res/debug/out/resources-debug.ap_
+Resolve mutations for :app:kaptGenerateStubsDebugKotlin (Thread[Execution worker Thread 5,5,main]) started.
+:app:kaptGenerateStubsDebugKotlin (Thread[Execution worker Thread 5,5,main]) started.
+
+> Task :app:kaptGenerateStubsDebugKotlin UP-TO-DATE
+Caching disabled for task ':app:kaptGenerateStubsDebugKotlin' because:
+  Build cache is disabled
+Skipping task ':app:kaptGenerateStubsDebugKotlin' as it is up-to-date.
+Resolve mutations for :app:kaptDebugKotlin (Thread[Execution worker Thread 4,5,main]) started.
+:app:kaptDebugKotlin (Thread[Execution worker Thread 4,5,main]) started.
+
+> Task :app:kaptDebugKotlin UP-TO-DATE
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+Caching disabled for task ':app:kaptDebugKotlin' because:
+  Build cache is disabled
+Skipping task ':app:kaptDebugKotlin' as it is up-to-date.
+Resolve mutations for :app:compileDebugKotlin (Thread[Execution worker Thread 4,5,main]) started.
+:app:compileDebugKotlin (Thread[Execution worker Thread 4,5,main]) started.
+
+> Task :app:compileDebugKotlin
+Caching disabled for task ':app:compileDebugKotlin' because:
+  Build cache is disabled
+Task ':app:compileDebugKotlin' is not up-to-date because:
+  Task has failed previously.
+The input changes require a full rebuild for incremental task ':app:compileDebugKotlin'.
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/kotlin', not found
+file or directory '/Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/debug/java', not found
+Kotlin source files: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/ui/viewmodel/DidViewModel.kt, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/ui/MainActivity.kt, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/ui/components/VideoContent.kt, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/ui/components/TextContent.kt, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/ui/components/ImageContent.kt, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/ui/theme/Theme.kt, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/ui/DidScreen.kt, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/di/AppModule.kt, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/util/AssetDownloader.kt, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/DidApplication.kt, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/data/repository/DidRepository.kt, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/data/local/DidDao.kt, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/data/local/DidEntity.kt, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/data/local/DidDatabase.kt, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/data/remote/DidApi.kt
+Java source files: /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/dagger/hilt/internal/aggregatedroot/codegen/_com_example_didapp_DidApplication.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_example_didapp_ui_viewmodel_DidViewModel_HiltModules_KeyModule.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_example_didapp_DidApplication_GeneratedInjector.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_example_didapp_ui_viewmodel_DidViewModel_HiltModules_BindsModule.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_example_didapp_ui_MainActivity_GeneratedInjector.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_example_didapp_di_AppModule.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/com/example/didapp/ui/viewmodel/DidViewModel_HiltModules.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/com/example/didapp/ui/viewmodel/DidViewModel_Factory.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/com/example/didapp/ui/viewmodel/DidViewModel_HiltModules_KeyModule_ProvideFactory.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/com/example/didapp/ui/Hilt_MainActivity.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/com/example/didapp/ui/MainActivity_GeneratedInjector.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/com/example/didapp/di/AppModule_ProvideDidDaoFactory.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/com/example/didapp/di/AppModule_ProvideDidApiFactory.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/com/example/didapp/di/AppModule_ProvideDatabaseFactory.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/com/example/didapp/util/AssetDownloader_Factory.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/com/example/didapp/data/repository/DidRepository_Factory.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/com/example/didapp/data/local/DidDatabase_Impl.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/com/example/didapp/data/local/DidDao_Impl.java, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/generated/source/kapt/debug/com/example/didapp/DidApplication_GeneratedInjector.java
+Script source files: 
+Script file extensions: 
+Using Kotlin/JVM incremental compilation
+[KOTLIN] Kotlin compilation 'jdkHome' argument: null
+i: found daemon on port 17041 (5876031 ms old), trying to connect
+i: connected to the daemon
+Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), areFileChangesKnown=false, modifiedFiles=null, deletedFiles=null, classpathChanges=NotAvailableForNonIncrementalRun, workingDir=/Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/kotlin/compileDebugKotlin/cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=/Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/kotlin/compileDebugKotlin/local-state/build-history.bin, useModuleDetection=true), usePreciseJavaTracking=true, outputFiles=[/Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/tmp/kotlin-classes/debug, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/kotlin/compileDebugKotlin/cacheable, /Users/minsupark/.gemini/antigravity/scratch/did-project/app/build/kotlin/compileDebugKotlin/local-state])
+e: file:///Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/ui/DidScreen.kt:23:26 This foundation API is experimental and is likely to change or be removed in the future.
+e: file:///Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/ui/DidScreen.kt:25:9 This foundation API is experimental and is likely to change or be removed in the future.
+e: file:///Users/minsupark/.gemini/antigravity/scratch/did-project/app/src/main/java/com/example/didapp/ui/DidScreen.kt:26:21 This foundation API is experimental and is likely to change or be removed in the future.
+
+> Task :app:compileDebugKotlin FAILED
+AAPT2 aapt2-8.2.2-10154469-osx Daemon #0: shutdown
+
+[Incubating] Problems report is available at: file:///Users/minsupark/.gemini/antigravity/scratch/did-project/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 11s
+28 actionable tasks: 25 executed, 3 up-to-date
+Watched directory hierarchies: [/Users/minsupark/.gemini/antigravity/scratch/did-project]
