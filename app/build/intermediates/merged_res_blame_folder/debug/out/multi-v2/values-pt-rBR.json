@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.didapp-mergeDebugResources-2:/values-pt-rBR/values-pt-rBR.xml",
+            "outputFile": "com.secta9ine.didapp-mergeDebugResources-2:/values-pt-rBR/values-pt-rBR.xml",
             "map": [
                 {
                     "source": "/Users/minsupark/.gradle/caches/transforms-3/13e8801e128a1c14098008111e599380/transformed/jetified-foundation-release/res/values-pt-rBR/values-pt-rBR.xml",

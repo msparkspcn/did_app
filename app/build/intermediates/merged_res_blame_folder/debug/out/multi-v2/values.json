@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.didapp-mergeDebugResources-2:/values/values.xml",
+            "outputFile": "com.secta9ine.didapp-mergeDebugResources-2:/values/values.xml",
             "map": [
                 {
                     "source": "/Users/minsupark/.gradle/caches/transforms-3/5eccf54b6c76490b7a7de5719ae5a971/transformed/jetified-media3-ui-1.2.0/res/values/values.xml",

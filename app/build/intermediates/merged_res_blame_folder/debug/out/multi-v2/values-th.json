@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.didapp-mergeDebugResources-2:/values-th/values-th.xml",
+            "outputFile": "com.secta9ine.didapp-mergeDebugResources-2:/values-th/values-th.xml",
             "map": [
                 {
                     "source": "/Users/minsupark/.gradle/caches/transforms-3/af637f5d29bc1b7e71b96ba45043327b/transformed/jetified-media3-exoplayer-1.2.0/res/values-th/values-th.xml",

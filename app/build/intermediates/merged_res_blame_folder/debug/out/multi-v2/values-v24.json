@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.didapp-mergeDebugResources-2:/values-v24/values-v24.xml",
+            "outputFile": "com.secta9ine.didapp-mergeDebugResources-2:/values-v24/values-v24.xml",
             "map": [
                 {
                     "source": "/Users/minsupark/.gradle/caches/transforms-3/9e434440c59f8281e4623e5402d5b0da/transformed/media-1.6.0/res/values-v24/values-v24.xml",

@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DID Canvas Editor</title>
+  <style>
+    :root {
+      --bg: #ececec;
+      --panel: #f6f6f6;
+      --line: #d8d8d8;
+      --text: #2f2f2f;
+      --muted: #7a7a7a;
+      --accent: #00c7df;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans KR", "Pretendard", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      height: 100vh;
+      display: grid;
+      grid-template-rows: 52px 1fr;
+    }
+    .top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+    .top input, .top button {
+      height: 34px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      font-size: 13px;
+    }
+    .top button { cursor: pointer; }
+    .save { background: #1f6fff; color: #fff; border-color: #1f6fff; }
+    .ver { font-size: 12px; color: var(--muted); margin-left: auto; }
+    .status { font-size: 12px; color: #444; margin-left: 10px; }
+    .status.err { color: #c53030; }
+
+    .main {
+      display: grid;
+      grid-template-columns: 72px 1fr 300px;
+      min-height: 0;
+    }
+
+    .left {
+      border-right: 1px solid var(--line);
+      background: var(--panel);
+      padding-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+    .tool {
+      width: 52px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      padding: 8px 4px;
+      text-align: center;
+      font-size: 11px;
+      color: #555;
+      cursor: pointer;
+    }
+    .tool:hover { border-color: var(--line); background: #fff; }
+    .tool .icon { font-size: 18px; display: block; margin-bottom: 5px; }
+
+    .center {
+      display: grid;
+      place-items: center;
+      min-height: 0;
+      overflow: auto;
+      background: #e5e5e5;
+      padding: 20px;
+    }
+    .stage {
+      position: relative;
+      background: #ddd;
+      border: 1px solid #c8c8c8;
+      box-shadow: 0 8px 20px rgba(0,0,0,.12);
+      transform-origin: top left;
+      background-image:
+        linear-gradient(to right, rgba(0,0,0,.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,0,0,.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .block {
+      position: absolute;
+      border: 2px solid rgba(0,0,0,.28);
+      background: rgba(255,255,255,.22);
+      cursor: move;
+      user-select: none;
+      overflow: hidden;
+    }
+    .block.sel {
+      border-color: var(--accent);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.7);
+    }
+    .tag {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: rgba(0,0,0,.55);
+      color: #fff;
+      font-size: 10px;
+      padding: 2px 5px;
+    }
+    .preview {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      color: #222;
+      text-align: center;
+      padding: 8px;
+    }
+    .handle {
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border: 1px solid #666;
+      border-radius: 2px;
+      position: absolute;
+    }
+    .h-tl { left: -6px; top: -6px; cursor: nwse-resize; }
+    .h-tr { right: -6px; top: -6px; cursor: nesw-resize; }
+    .h-bl { left: -6px; bottom: -6px; cursor: nesw-resize; }
+    .h-br { right: -6px; bottom: -6px; cursor: nwse-resize; }
+
+    .right {
+      border-left: 1px solid var(--line);
+      background: var(--panel);
+      min-height: 0;
+      overflow: auto;
+    }
+    .card {
+      border-bottom: 1px solid var(--line);
+      padding: 12px;
+      background: #f9f9f9;
+    }
+    .card h4 { margin: 0 0 10px; font-size: 13px; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .field label { display:block; font-size:11px; color:var(--muted); margin-bottom:3px; }
+    .field input, .field select, .field textarea {
+      width:100%; border:1px solid var(--line); border-radius:6px; padding:6px; font-size:12px;
+    }
+    .coords {
+      background:#fff; border:1px dashed var(--line); border-radius:8px; padding:8px; font-size:12px;
+    }
+    .asset-list { display:grid; gap:6px; }
+    .asset-item { border:1px solid var(--line); background:#fff; border-radius:8px; padding:6px; font-size:12px; }
+    .btns { display:flex; gap:6px; margin-top:8px; }
+    .btns button { border:1px solid var(--line); border-radius:6px; padding:6px 8px; font-size:12px; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <strong>DID Canvas Editor</strong>
+    <span style="font-size:12px;color:#777;">DID</span>
+    <input id="didId" value="did-001" />
+    <button id="loadBtn">불러오기</button>
+    <button id="saveBtn" class="save">저장 + 배포</button>
+    <span id="ver" class="ver">version: -</span>
+    <span id="status" class="status">ready</span>
+  </div>
+
+  <div class="main">
+    <aside class="left">
+      <div class="tool" id="addImage"><span class="icon">🖼️</span>그래픽</div>
+      <div class="tool" id="addVideo"><span class="icon">🎬</span>동영상</div>
+      <div class="tool" id="addText"><span class="icon">🅣</span>텍스트</div>
+      <div class="tool" id="addZone"><span class="icon">▣</span>영역</div>
+      <div class="tool" id="removeSel"><span class="icon">🗑️</span>삭제</div>
+    </aside>
+
+    <section class="center" id="center">
+      <div class="stage" id="stage"></div>
+    </section>
+
+    <aside class="right">
+      <div class="card">
+        <h4>선택 객체 좌표</h4>
+        <div id="coordBox" class="coords">선택 없음</div>
+      </div>
+      <div class="card">
+        <h4>속성</h4>
+        <div class="row">
+          <div class="field"><label>X</label><input id="x" type="number" /></div>
+          <div class="field"><label>Y</label><input id="y" type="number" /></div>
+          <div class="field"><label>W</label><input id="w" type="number" /></div>
+          <div class="field"><label>H</label><input id="h" type="number" /></div>
+        </div>
+        <div class="field" style="margin-top:8px;"><label>배경색(hex)</label><input id="bg" /></div>
+        <div class="field" style="margin-top:8px;"><label>zIndex</label><input id="z" type="number" /></div>
+      </div>
+      <div class="card">
+        <h4>에셋 관리</h4>
+        <div class="field"><label>선택 영역에 에셋 할당</label><select id="assetSel"></select></div>
+        <div class="btns"><button id="addPlaylist">재생목록 추가</button></div>
+        <div id="playlistWrap" style="margin-top:8px;"></div>
+      </div>
+      <div class="card">
+        <h4>Asset 라이브러리</h4>
+        <div id="assetList" class="asset-list"></div>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    const stage = document.getElementById('stage');
+    const center = document.getElementById('center');
+    const didIdEl = document.getElementById('didId');
+    const loadBtn = document.getElementById('loadBtn');
+    const saveBtn = document.getElementById('saveBtn');
+    const verEl = document.getElementById('ver');
+    const statusEl = document.getElementById('status');
+
+    const coordBox = document.getElementById('coordBox');
+    const xEl = document.getElementById('x');
+    const yEl = document.getElementById('y');
+    const wEl = document.getElementById('w');
+    const hEl = document.getElementById('h');
+    const bgEl = document.getElementById('bg');
+    const zEl = document.getElementById('z');
+
+    const assetSel = document.getElementById('assetSel');
+    const playlistWrap = document.getElementById('playlistWrap');
+    const assetList = document.getElementById('assetList');
+
+    let snapshot = null;
+    let selectedZoneId = null;
+    let drag = null;
+    const MAX_ZONES = 5;
+
+    const uid = p => `${p}_${Math.random().toString(36).slice(2,8)}`;
+    const num = (v,f=0)=>Number.isFinite(Number(v))?Number(v):f;
+    const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));
+
+    function setStatus(text, isErr = false) {
+      statusEl.textContent = text;
+      statusEl.className = isErr ? 'status err' : 'status';
+    }
+
+
+    function scaleInfo() {
+      const cw = snapshot.layout.canvas.width;
+      const ch = snapshot.layout.canvas.height;
+      const maxW = center.clientWidth - 40;
+      const maxH = center.clientHeight - 40;
+      const scale = Math.max(0.25, Math.min(maxW / cw, maxH / ch));
+      return { cw, ch, scale };
+    }
+
+    function selectedZone() {
+      return snapshot.layout.zones.find(z => z.id === selectedZoneId) || null;
+    }
+
+    function ensurePlaylist(zoneId) {
+      if (!snapshot.zonePlaylists[zoneId]) snapshot.zonePlaylists[zoneId] = [];
+      return snapshot.zonePlaylists[zoneId];
+    }
+
+    function render() {
+      if (!snapshot) return;
+      const { cw, ch, scale } = scaleInfo();
+      verEl.textContent = `version: ${snapshot.version}`;
+      stage.style.width = `${cw}px`;
+      stage.style.height = `${ch}px`;
+      stage.style.transform = `scale(${scale})`;
+      renderStage();
+      renderInspector();
+      renderAssets();
+    }
+
+    function renderStage() {
+      stage.innerHTML = '';
+      snapshot.layout.zones
+        .slice().sort((a,b)=>a.zIndex-b.zIndex)
+        .forEach(z => {
+          const b = document.createElement('div');
+          b.className = `block ${z.id===selectedZoneId?'sel':''}`;
+          b.style.left = `${z.x}px`;
+          b.style.top = `${z.y}px`;
+          b.style.width = `${z.width}px`;
+          b.style.height = `${z.height}px`;
+          b.style.zIndex = `${100 + z.zIndex}`;
+          if (z.backgroundHex) b.style.background = z.backgroundHex + '55';
+
+          const tag = document.createElement('div');
+          tag.className = 'tag';
+          tag.textContent = z.id;
+
+          const p = document.createElement('div');
+          p.className = 'preview';
+          const arr = snapshot.zonePlaylists[z.id] || [];
+          p.textContent = arr.length ? arr.map(i => i.assetId).join(' | ') : 'Empty';
+
+          const handles = ['tl','tr','bl','br'];
+          handles.forEach(pos => {
+            const h = document.createElement('div');
+            h.className = `handle h-${pos}`;
+            h.dataset.pos = pos;
+            b.appendChild(h);
+          });
+
+          b.appendChild(tag);
+          b.appendChild(p);
+
+          b.addEventListener('pointerdown', e => {
+            selectedZoneId = z.id;
+            const { scale } = scaleInfo();
+            const rect = stage.getBoundingClientRect();
+            const px = (e.clientX - rect.left) / scale;
+            const py = (e.clientY - rect.top) / scale;
+            const isHandle = e.target.classList.contains('handle');
+            drag = {
+              mode: isHandle ? 'resize' : 'move',
+              pos: isHandle ? e.target.dataset.pos : null,
+              id: z.id,
+              sx: px,
+              sy: py,
+              ox: z.x,
+              oy: z.y,
+              ow: z.width,
+              oh: z.height
+            };
+            b.setPointerCapture(e.pointerId);
+            render();
+          });
+
+          stage.appendChild(b);
+        });
+    }
+
+    function renderInspector() {
+      const z = selectedZone();
+      if (!z) {
+        coordBox.textContent = '선택 없음';
+        [xEl,yEl,wEl,hEl,bgEl,zEl].forEach(el => el.value = '');
+        playlistWrap.innerHTML = '';
+        assetSel.innerHTML = '<option value="">--선택--</option>';
+        return;
+      }
+
+      coordBox.textContent = `x: ${Math.round(z.x)}, y: ${Math.round(z.y)}, w: ${Math.round(z.width)}, h: ${Math.round(z.height)} (canvas px)`;
+      xEl.value = Math.round(z.x);
+      yEl.value = Math.round(z.y);
+      wEl.value = Math.round(z.width);
+      hEl.value = Math.round(z.height);
+      bgEl.value = z.backgroundHex || '';
+      zEl.value = z.zIndex;
+
+      const assets = Object.values(snapshot.assets);
+      assetSel.innerHTML = '<option value="">-- 에셋 선택 --</option>' + assets.map(a => `<option value="${a.id}">${a.id} (${a.type})</option>`).join('');
+
+      const pl = ensurePlaylist(z.id);
+      playlistWrap.innerHTML = '';
+      pl.forEach((item, i) => {
+        const row = document.createElement('div');
+        row.className = 'asset-item';
+        row.innerHTML = `
+          <div><strong>${i}. ${item.assetId}</strong></div>
+          <div class="row" style="margin-top:4px;">
+            <div class="field"><label>duration</label><input type="number" value="${item.durationSec ?? ''}" /></div>
+            <div class="field"><label>order</label><input type="number" value="${item.order}" /></div>
+          </div>
+          <div class="btns"><button data-del>삭제</button></div>
+        `;
+        const [durEl, ordEl] = row.querySelectorAll('input');
+        durEl.addEventListener('input', e => item.durationSec = num(e.target.value, null));
+        ordEl.addEventListener('input', e => { item.order = Math.max(0, Math.round(num(e.target.value, i))); sortPlaylist(pl); renderStage(); });
+        row.querySelector('[data-del]').addEventListener('click', () => { pl.splice(i,1); normalize(pl); render(); });
+        playlistWrap.appendChild(row);
+      });
+    }
+
+    function renderAssets() {
+      assetList.innerHTML = '';
+      Object.values(snapshot.assets).forEach(a => {
+        const row = document.createElement('div');
+        row.className = 'asset-item';
+        row.innerHTML = `
+          <div><strong>${a.id}</strong> <span style="color:#777">${a.type}</span></div>
+          <div class="field"><label>source</label><input value="${esc(a.source)}" /></div>
+          <div class="btns"><button data-del>삭제</button></div>
+        `;
+        row.querySelector('input').addEventListener('input', e => a.source = e.target.value);
+        row.querySelector('[data-del]').addEventListener('click', () => {
+          delete snapshot.assets[a.id];
+          Object.keys(snapshot.zonePlaylists).forEach(zid => {
+            snapshot.zonePlaylists[zid] = snapshot.zonePlaylists[zid].filter(it => it.assetId !== a.id);
+            normalize(snapshot.zonePlaylists[zid]);
+          });
+          render();
+        });
+        assetList.appendChild(row);
+      });
+    }
+
+    function addAsset(type) {
+      const id = uid(type.toLowerCase());
+      snapshot.assets[id] = {
+        id,
+        type,
+        source: type === 'TEXT' ? '새 텍스트' : 'https://',
+        metadata: {},
+        defaultDurationSec: type === 'VIDEO' ? 30 : 10
+      };
+      render();
+    }
+
+    function addZone() {
+      if (snapshot.layout.zones.length >= MAX_ZONES) {
+        alert(`영역 갯수를 초과했습니다. 최대 ${MAX_ZONES}개까지 추가할 수 있습니다.`);
+        return;
+      }
+      const { cw, ch } = scaleInfo();
+      const id = uid('zone');
+      snapshot.layout.zones.push({
+        id,
+        x: Math.round(cw * 0.1),
+        y: Math.round(ch * 0.1),
+        width: 320,
+        height: 220,
+        zIndex: snapshot.layout.zones.length,
+        backgroundHex: '#444444',
+        fitMode: 'COVER'
+      });
+      snapshot.zonePlaylists[id] = [];
+      selectedZoneId = id;
+      render();
+    }
+
+    function removeSel() {
+      if (!selectedZoneId) return;
+      snapshot.layout.zones = snapshot.layout.zones.filter(z => z.id !== selectedZoneId);
+      delete snapshot.zonePlaylists[selectedZoneId];
+      selectedZoneId = snapshot.layout.zones[0]?.id || null;
+      render();
+    }
+
+    async function loadSnapshot() {
+      const didId = didIdEl.value.trim() || 'did-001';
+      try {
+        setStatus('불러오는 중...');
+        const res = await fetch(`/api/admin/snapshots/${didId}`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        snapshot = await res.json();
+        selectedZoneId = snapshot.layout.zones[0]?.id || null;
+        render();
+        setStatus(`불러오기 성공 (${didId})`);
+      } catch (e) {
+        setStatus(`불러오기 실패: ${e.message}`, true);
+        alert(`불러오기 실패\\n${e.message}\\n\\n서버 실행/URL/didId를 확인하세요.`);
+      }
+    }
+
+    async function saveSnapshot() {
+      const didId = didIdEl.value.trim() || 'did-001';
+      try {
+        setStatus('저장 중...');
+        const payload = JSON.parse(JSON.stringify(snapshot));
+        Object.keys(payload.zonePlaylists).forEach(zid => normalize(payload.zonePlaylists[zid]));
+        const res = await fetch(`/api/admin/snapshots/${didId}`, {
+          method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
+        });
+        const out = await res.json();
+        if (!res.ok) throw new Error(out.error || `HTTP ${res.status}`);
+        await loadSnapshot();
+        setStatus(`저장 완료 (v${out.version})`);
+      } catch (e) {
+        setStatus(`저장 실패: ${e.message}`, true);
+        alert(`저장 실패\\n${e.message}`);
+      }
+    }
+
+    function sortPlaylist(arr) { arr.sort((a,b)=>a.order-b.order); normalize(arr); }
+    function normalize(arr) { arr.forEach((x,i)=>x.order=i); }
+    function esc(s='') { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+    function applyInspector() {
+      const z = selectedZone();
+      if (!z) return;
+      const { cw, ch } = scaleInfo();
+      z.x = clamp(num(xEl.value, z.x), 0, cw - z.width);
+      z.y = clamp(num(yEl.value, z.y), 0, ch - z.height);
+      z.width = clamp(num(wEl.value, z.width), 20, cw - z.x);
+      z.height = clamp(num(hEl.value, z.height), 20, ch - z.y);
+      z.backgroundHex = bgEl.value.trim() || null;
+      z.zIndex = Math.round(num(zEl.value, z.zIndex));
+      render();
+    }
+
+    function onMove(e) {
+      if (!drag) return;
+      const z = snapshot.layout.zones.find(x => x.id === drag.id);
+      if (!z) return;
+      const { cw, ch, scale } = scaleInfo();
+      const rect = stage.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / scale;
+      const y = (e.clientY - rect.top) / scale;
+      const dx = x - drag.sx;
+      const dy = y - drag.sy;
+
+      if (drag.mode === 'move') {
+        z.x = clamp(drag.ox + dx, 0, cw - z.width);
+        z.y = clamp(drag.oy + dy, 0, ch - z.height);
+      } else {
+        if (drag.pos.includes('r')) z.width = clamp(drag.ow + dx, 20, cw - z.x);
+        if (drag.pos.includes('b')) z.height = clamp(drag.oh + dy, 20, ch - z.y);
+        if (drag.pos.includes('l')) {
+          const nx = clamp(drag.ox + dx, 0, drag.ox + drag.ow - 20);
+          const nw = drag.ow + (drag.ox - nx);
+          z.x = nx; z.width = nw;
+        }
+        if (drag.pos.includes('t')) {
+          const ny = clamp(drag.oy + dy, 0, drag.oy + drag.oh - 20);
+          const nh = drag.oh + (drag.oy - ny);
+          z.y = ny; z.height = nh;
+        }
+      }
+      render();
+    }
+
+    function onUp() { drag = null; }
+
+    document.getElementById('addImage').onclick = () => addAsset('IMAGE');
+    document.getElementById('addVideo').onclick = () => addAsset('VIDEO');
+    document.getElementById('addText').onclick = () => addAsset('TEXT');
+    document.getElementById('addZone').onclick = addZone;
+    document.getElementById('removeSel').onclick = removeSel;
+
+    loadBtn.onclick = loadSnapshot;
+    saveBtn.onclick = saveSnapshot;
+
+    [xEl,yEl,wEl,hEl,bgEl,zEl].forEach(el => el.addEventListener('input', applyInspector));
+    document.getElementById('addPlaylist').onclick = () => {
+      const z = selectedZone();
+      if (!z) return;
+      const aid = assetSel.value;
+      if (!aid) return;
+      const pl = ensurePlaylist(z.id);
+      pl.push({ assetId: aid, order: pl.length, durationSec: null, transition: 'NONE' });
+      render();
+    };
+
+    window.addEventListener('pointermove', onMove);
+    window.addEventListener('pointerup', onUp);
+    window.addEventListener('resize', () => render());
+
+    loadSnapshot();
+  </script>
+</body>
+</html>

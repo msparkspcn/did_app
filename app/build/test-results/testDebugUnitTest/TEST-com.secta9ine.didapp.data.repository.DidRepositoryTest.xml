@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.secta9ine.didapp.data.repository.DidRepositoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-02-24T08:24:29.216Z" hostname="MacBookPro.local" time="3.645">
+  <properties/>
+  <testcase name="syncWithRemote should fetch from API, save to DAO, and download assets" classname="com.secta9ine.didapp.data.repository.DidRepositoryTest" time="2.744"/>
+  <testcase name="syncWithRemote should clear all when API returns empty list" classname="com.secta9ine.didapp.data.repository.DidRepositoryTest" time="0.072"/>
+  <testcase name="syncWithRemote should inject samples when API fails and DB is empty" classname="com.secta9ine.didapp.data.repository.DidRepositoryTest" time="0.829"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

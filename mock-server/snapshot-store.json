@@ -1,0 +1,140 @@
+{
+  "did-001": {
+    "version": 7,
+    "validFromEpochSec": null,
+    "validToEpochSec": null,
+    "layout": {
+      "id": "layout_three_zone",
+      "canvas": {
+        "width": 1920,
+        "height": 1080
+      },
+      "coordinateSystem": "CANVAS_PIXEL",
+      "zones": [
+        {
+          "id": "left",
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 1080,
+          "zIndex": 0,
+          "backgroundHex": "#111111",
+          "fitMode": "COVER"
+        },
+        {
+          "id": "center",
+          "x": 360,
+          "y": 0,
+          "width": 960,
+          "height": 1080,
+          "zIndex": 1,
+          "backgroundHex": "#000000",
+          "fitMode": "COVER"
+        },
+        {
+          "id": "right",
+          "x": 1320,
+          "y": 0,
+          "width": 600,
+          "height": 1080,
+          "zIndex": 0,
+          "backgroundHex": "#111111",
+          "fitMode": "COVER"
+        },
+        {
+          "id": "bottom_text",
+          "x": 0,
+          "y": 900,
+          "width": 1920,
+          "height": 180,
+          "zIndex": 5,
+          "backgroundHex": "#222222",
+          "fitMode": "COVER"
+        }
+      ]
+    },
+    "zonePlaylists": {
+      "left": [
+        {
+          "assetId": "video_left_1",
+          "order": 0,
+          "durationSec": 30,
+          "transition": "NONE"
+        }
+      ],
+      "center": [
+        {
+          "assetId": "image_center_1",
+          "order": 0,
+          "durationSec": 10,
+          "transition": "NONE"
+        },
+        {
+          "assetId": "image_center_2",
+          "order": 1,
+          "durationSec": 10,
+          "transition": "NONE"
+        },
+        {
+          "assetId": "text_center_1",
+          "order": 2,
+          "durationSec": 8,
+          "transition": "NONE"
+        }
+      ],
+      "right": [
+        {
+          "assetId": "video_right_1",
+          "order": 0,
+          "durationSec": 30,
+          "transition": "NONE"
+        }
+      ],
+      "bottom_text": [
+        {
+          "assetId": "text_center_1",
+          "order": 0,
+          "durationSec": 8,
+          "transition": "NONE"
+        }
+      ]
+    },
+    "assets": {
+      "video_left_1": {
+        "id": "video_left_1",
+        "type": "VIDEO",
+        "source": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+        "metadata": {},
+        "defaultDurationSec": 30
+      },
+      "video_right_1": {
+        "id": "video_right_1",
+        "type": "VIDEO",
+        "source": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        "metadata": {},
+        "defaultDurationSec": 30
+      },
+      "image_center_1": {
+        "id": "image_center_1",
+        "type": "IMAGE",
+        "source": "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?q=80&w=1920&h=1080&auto=format&fit=crop",
+        "metadata": {},
+        "defaultDurationSec": 10
+      },
+      "image_center_2": {
+        "id": "image_center_2",
+        "type": "IMAGE",
+        "source": "https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=1920&h=1080&auto=format&fit=crop",
+        "metadata": {},
+        "defaultDurationSec": 10
+      },
+      "text_center_1": {
+        "id": "text_center_1",
+        "type": "TEXT",
+        "source": "DID V2 Snapshot from API/WS",
+        "metadata": {},
+        "defaultDurationSec": 8
+      }
+    }
+  }
+}
