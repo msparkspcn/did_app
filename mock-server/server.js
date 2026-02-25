@@ -41,16 +41,16 @@ const createDefaultSnapshot = () => ({
     video_left_1: {
       id: 'video_left_1',
       type: 'VIDEO',
-      source: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      source: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
       metadata: {},
-      defaultDurationSec: 30
+      defaultDurationSec: 20
     },
     video_right_1: {
       id: 'video_right_1',
       type: 'VIDEO',
-      source: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+      source: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
       metadata: {},
-      defaultDurationSec: 30
+      defaultDurationSec: 20
     },
     image_center_1: {
       id: 'image_center_1',
@@ -123,6 +123,7 @@ app.get('/api/admin/snapshots/:didId', (req, res) => {
 app.post('/api/admin/snapshots/:didId', (req, res) => {
   const didId = req.params.didId;
   const incoming = req.body;
+  console.log('[API] POST /api/admin/snapshots/:didId', { didId, payload: incoming });
   if (!incoming || typeof incoming !== 'object' || !incoming.layout || !incoming.assets || !incoming.zonePlaylists) {
     return res.status(400).json({ error: 'Invalid snapshot payload' });
   }
@@ -152,6 +153,7 @@ const getSocketSet = didId => {
 const broadcastSnapshot = (didId, snapshot) => {
   const set = getSocketSet(didId);
   const payload = JSON.stringify({ type: 'SNAPSHOT_UPDATED', payload: snapshot });
+  console.log('[WS] broadcast', { didId, connections: set.size, payload: { type: 'SNAPSHOT_UPDATED', payload: snapshot } });
   for (const ws of set) {
     if (ws.readyState === ws.OPEN) ws.send(payload);
   }

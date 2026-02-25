@@ -18,6 +18,9 @@ abstract class V2SnapshotDao {
     @Query("SELECT * FROM v2_asset")
     abstract fun observeAssets(): Flow<List<V2AssetEntity>>
 
+    @Query("SELECT * FROM v2_asset")
+    abstract suspend fun getAssets(): List<V2AssetEntity>
+
     @Query("SELECT * FROM v2_zone_playlist_item ORDER BY zoneId ASC, playOrder ASC")
     abstract fun observeZonePlaylistItems(): Flow<List<V2ZonePlaylistItemEntity>>
 
@@ -61,4 +64,3 @@ abstract class V2SnapshotDao {
         if (zonePlaylistItems.isNotEmpty()) insertZonePlaylistItems(zonePlaylistItems)
     }
 }
-

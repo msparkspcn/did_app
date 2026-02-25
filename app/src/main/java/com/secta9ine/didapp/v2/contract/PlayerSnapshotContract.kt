@@ -50,6 +50,7 @@ data class AssetDto(
     val id: String,
     val type: AssetType,
     val source: String,
+    val localPath: String? = null,
     val metadata: Map<String, String> = emptyMap(),
     val defaultDurationSec: Int? = null
 )
@@ -57,8 +58,7 @@ data class AssetDto(
 enum class AssetType {
     IMAGE,
     VIDEO,
-    TEXT,
-    WEB
+    TEXT
 }
 
 enum class FitMode {

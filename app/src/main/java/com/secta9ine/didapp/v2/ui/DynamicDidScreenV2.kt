@@ -106,17 +106,21 @@ private fun ZoneViewport(
     Box(modifier = zoneModifier) {
         currentAsset?.let { asset ->
             when (asset.type) {
-                AssetType.IMAGE -> ImageContent(contentUrl = asset.source, localPath = null, modifier = Modifier.fillMaxSize())
+                AssetType.IMAGE -> ImageContent(
+                    contentUrl = asset.source,
+                    localPath = asset.localPath,
+                    modifier = Modifier.fillMaxSize()
+                )
                 AssetType.VIDEO -> VideoContent(
                     contentUrl = asset.source,
-                    localPath = null,
+                    localPath = asset.localPath,
+                    loop = assets.size == 1,
                     modifier = Modifier.fillMaxSize(),
                     onVideoEnd = {
                         currentIndex = (currentIndex + 1) % assets.size
                     }
                 )
                 AssetType.TEXT -> TextContent(text = asset.source, modifier = Modifier.fillMaxSize())
-                AssetType.WEB -> TextContent(text = "WEB: ${asset.source}", modifier = Modifier.fillMaxSize())
             }
         }
     }

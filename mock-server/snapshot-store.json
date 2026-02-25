@@ -1,6 +1,6 @@
 {
   "did-001": {
-    "version": 7,
+    "version": 19,
     "validFromEpochSec": null,
     "validToEpochSec": null,
     "layout": {
@@ -33,9 +33,9 @@
         },
         {
           "id": "right",
-          "x": 1320,
+          "x": 1333,
           "y": 0,
-          "width": 600,
+          "width": 587,
           "height": 1080,
           "zIndex": 0,
           "backgroundHex": "#111111",
@@ -103,16 +103,16 @@
       "video_left_1": {
         "id": "video_left_1",
         "type": "VIDEO",
-        "source": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+        "source": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
         "metadata": {},
-        "defaultDurationSec": 30
+        "defaultDurationSec": 20
       },
       "video_right_1": {
         "id": "video_right_1",
         "type": "VIDEO",
-        "source": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        "source": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
         "metadata": {},
-        "defaultDurationSec": 30
+        "defaultDurationSec": 20
       },
       "image_center_1": {
         "id": "image_center_1",
@@ -134,6 +134,48 @@
         "source": "DID V2 Snapshot from API/WS",
         "metadata": {},
         "defaultDurationSec": 8
+      },
+      "video_vih0ly": {
+        "id": "video_vih0ly",
+        "type": "VIDEO",
+        "source": "https://",
+        "metadata": {},
+        "defaultDurationSec": 30
+      },
+      "text_47bdw2": {
+        "id": "text_47bdw2",
+        "type": "TEXT",
+        "source": "새 텍스트",
+        "metadata": {},
+        "defaultDurationSec": 10
+      },
+      "video_e3y73v": {
+        "id": "video_e3y73v",
+        "type": "VIDEO",
+        "source": "https://",
+        "metadata": {},
+        "defaultDurationSec": 30
+      },
+      "image_kbdirb": {
+        "id": "image_kbdirb",
+        "type": "IMAGE",
+        "source": "https://",
+        "metadata": {},
+        "defaultDurationSec": 10
+      },
+      "video_pd3ym1": {
+        "id": "video_pd3ym1",
+        "type": "VIDEO",
+        "source": "https://",
+        "metadata": {},
+        "defaultDurationSec": 30
+      },
+      "text_3xk7pu": {
+        "id": "text_3xk7pu",
+        "type": "TEXT",
+        "source": "새 텍스트",
+        "metadata": {},
+        "defaultDurationSec": 10
       }
     }
   }

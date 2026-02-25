@@ -20,6 +20,7 @@ fun VideoContent(
     contentUrl: String,
     localPath: String?,
     onVideoEnd: () -> Unit,
+    loop: Boolean = false,
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
@@ -31,11 +32,11 @@ fun VideoContent(
             setMediaItem(MediaItem.fromUri(videoUri))
             prepare()
             playWhenReady = true
-            repeatMode = Player.REPEAT_MODE_OFF
+            repeatMode = if (loop) Player.REPEAT_MODE_ONE else Player.REPEAT_MODE_OFF
 
             addListener(object : Player.Listener {
                 override fun onPlaybackStateChanged(playbackState: Int) {
-                    if (playbackState == Player.STATE_ENDED) {
+                    if (!loop && playbackState == Player.STATE_ENDED) {
                         latestOnVideoEnd.value()
                     }
                 }

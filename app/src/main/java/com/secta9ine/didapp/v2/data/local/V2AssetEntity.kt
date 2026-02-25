@@ -8,7 +8,7 @@ data class V2AssetEntity(
     @PrimaryKey val assetId: String,
     val type: String,
     val source: String,
+    val localPath: String?,
     val metadataJson: String,
     val defaultDurationSec: Int?
 )
-

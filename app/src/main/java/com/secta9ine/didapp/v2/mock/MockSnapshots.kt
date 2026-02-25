@@ -64,14 +64,14 @@ object MockSnapshots {
                 "video_left_1" to AssetDto(
                     id = "video_left_1",
                     type = AssetType.VIDEO,
-                    source = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-                    defaultDurationSec = 30
+                    source = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+                    defaultDurationSec = 20
                 ),
                 "video_right_1" to AssetDto(
                     id = "video_right_1",
                     type = AssetType.VIDEO,
-                    source = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-                    defaultDurationSec = 30
+                    source = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+                    defaultDurationSec = 20
                 ),
                 "image_center_1" to AssetDto(
                     id = "image_center_1",

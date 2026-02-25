@@ -16,7 +16,7 @@ import com.secta9ine.didapp.v2.data.local.V2ZonePlaylistItemEntity
         V2AssetEntity::class,
         V2ZonePlaylistItemEntity::class
     ],
-    version = 2,
+    version = 3,
     exportSchema = false
 )
 abstract class DidDatabase : RoomDatabase() {

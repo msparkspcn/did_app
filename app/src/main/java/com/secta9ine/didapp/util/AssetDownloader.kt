@@ -39,4 +39,10 @@ class AssetDownloader @Inject constructor(
             }
         }
     }
+
+    suspend fun deleteFile(path: String) {
+        withContext(Dispatchers.IO) {
+            runCatching { File(path).delete() }
+        }
+    }
 }
