@@ -4,15 +4,41 @@ import { WebSocketServer } from 'ws';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import jwt from 'jsonwebtoken';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const PORT = process.env.PORT || 8080;
 const STORE_FILE = path.join(__dirname, 'snapshot-store.json');
+const JWT_SECRET = process.env.JWT_SECRET || 'did-dev-secret';
+const DEV_JWT_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQtMDAxIiwicm9sZSI6ImRldiJ9.mTWi_MeRhODeQ382jeLB26y2rTgE-kyqOIbovUjKUAM';
 
 const app = express();
 app.use(express.json({ limit: '2mb' }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+const extractBearerToken = req => {
+  const auth = req.headers.authorization || '';
+  if (auth.startsWith('Bearer ')) return auth.slice(7).trim();
+  return null;
+};
+
+const verifyJwt = token => {
+  if (!token) return null;
+  try {
+    return jwt.verify(token, JWT_SECRET, { algorithms: ['HS256'] });
+  } catch {
+    return null;
+  }
+};
+
+const requireAuth = (req, res, next) => {
+  const token = extractBearerToken(req);
+  const decoded = verifyJwt(token);
+  if (!decoded) return res.status(401).json({ error: 'Unauthorized' });
+  req.jwt = decoded;
+  next();
+};
 
 const createDefaultSnapshot = () => ({
   version: 1,
@@ -112,6 +138,13 @@ app.get('/health', (_req, res) => {
   res.json({ ok: true, ts: Date.now() });
 });
 
+app.get('/api/auth/dev-token', (_req, res) => {
+  res.json({ token: DEV_JWT_TOKEN });
+});
+
+app.use('/api/admin', requireAuth);
+app.use('/api/players', requireAuth);
+
 app.get('/api/players/:didId/snapshot', (req, res) => {
   res.json(getSnapshot(req.params.didId));
 });
@@ -162,6 +195,18 @@ const broadcastSnapshot = (didId, snapshot) => {
 wss.on('connection', (ws, req) => {
   const fullUrl = new URL(req.url, `http://${req.headers.host}`);
   const didId = fullUrl.searchParams.get('didId') || 'did-001';
+  const queryToken = fullUrl.searchParams.get('token');
+  const headerToken = (() => {
+    const auth = req.headers.authorization || '';
+    if (auth.startsWith('Bearer ')) return auth.slice(7).trim();
+    return null;
+  })();
+  const decoded = verifyJwt(queryToken || headerToken);
+  if (!decoded) {
+    ws.close(1008, 'Unauthorized');
+    return;
+  }
+
   const set = getSocketSet(didId);
   set.add(ws);
 

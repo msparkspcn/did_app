@@ -40,6 +40,7 @@ class DidV2Repository @Inject constructor(
 ) {
 //    private val wsUrl = "ws://10.0.2.2:8080/ws/player-snapshot"
     private val wsUrl = "ws://10.212.44.212:8080/ws/player-snapshot"
+    private val devJwtToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQtMDAxIiwicm9sZSI6ImRldiJ9.mTWi_MeRhODeQ382jeLB26y2rTgE-kyqOIbovUjKUAM"
     val snapshotFlow: Flow<PlayerSnapshotDto?> = combine(
         dao.observeSnapshot(),
         dao.observeZones(),
@@ -108,7 +109,7 @@ class DidV2Repository @Inject constructor(
     }
 
     fun startRealtime(didId: String, scope: CoroutineScope) {
-        wsClient.connect(wsUrl = wsUrl, didId = didId) { snapshot ->
+        wsClient.connect(wsUrl = wsUrl, didId = didId, jwtToken = devJwtToken) { snapshot ->
             scope.launch {
                 val processedAssets = replaceSnapshot(snapshot)
                 val localPathSummary = processedAssets.joinToString(

@@ -32,17 +32,20 @@ class SnapshotWebSocketClient @Inject constructor(
 
     private var wsUrl: String? = null
     private var didId: String? = null
+    private var jwtToken: String? = null
     private var onSnapshot: ((PlayerSnapshotDto) -> Unit)? = null
 
     fun connect(
         wsUrl: String,
         didId: String,
+        jwtToken: String,
         onSnapshot: (PlayerSnapshotDto) -> Unit
     ) {
         disconnect()
         shouldReconnect = true
         this.wsUrl = wsUrl
         this.didId = didId
+        this.jwtToken = jwtToken
         this.onSnapshot = onSnapshot
         reconnectAttempts = 0
         reconnectJob?.cancel()
@@ -52,9 +55,10 @@ class SnapshotWebSocketClient @Inject constructor(
     private fun connectInternal() {
         val baseUrl = wsUrl ?: return
         val currentDidId = didId ?: return
+        val token = jwtToken ?: return
 
         val request = Request.Builder()
-            .url("$baseUrl?didId=$currentDidId")
+            .url("$baseUrl?didId=$currentDidId&token=$token")
             .build()
 
         webSocket = okHttpClient.newWebSocket(request, object : WebSocketListener() {

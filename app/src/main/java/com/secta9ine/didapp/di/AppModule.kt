@@ -23,6 +23,7 @@ import javax.inject.Singleton
 object AppModule {
 //    private const val DEV_API_BASE_URL = "http://10.0.2.2:8080/api/"
     private const val DEV_API_BASE_URL = "http://10.212.44.212:8080/api/"
+    private const val DEV_JWT_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQtMDAxIiwicm9sZSI6ImRldiJ9.mTWi_MeRhODeQ382jeLB26y2rTgE-kyqOIbovUjKUAM"
 
     @Provides
     @Singleton
@@ -50,13 +51,24 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideOkHttpClient(): OkHttpClient = OkHttpClient.Builder().build()
+    fun provideOkHttpClient(): OkHttpClient {
+        return OkHttpClient.Builder()
+            .addInterceptor { chain ->
+                val req = chain.request()
+                val withAuth = req.newBuilder()
+                    .addHeader("Authorization", "Bearer $DEV_JWT_TOKEN")
+                    .build()
+                chain.proceed(withAuth)
+            }
+            .build()
+    }
 
     @Provides
     @Singleton
-    fun provideDidApi(): DidApi {
+    fun provideDidApi(okHttpClient: OkHttpClient): DidApi {
         return Retrofit.Builder()
             .baseUrl(DEV_API_BASE_URL)
+            .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(DidApi::class.java)

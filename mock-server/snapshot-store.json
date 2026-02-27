@@ -1,6 +1,6 @@
 {
   "did-001": {
-    "version": 19,
+    "version": 23,
     "validFromEpochSec": null,
     "validToEpochSec": null,
     "layout": {
@@ -23,7 +23,7 @@
         },
         {
           "id": "center",
-          "x": 360,
+          "x": 360.94938380281695,
           "y": 0,
           "width": 960,
           "height": 1080,
@@ -95,6 +95,12 @@
           "assetId": "text_center_1",
           "order": 0,
           "durationSec": 8,
+          "transition": "NONE"
+        },
+        {
+          "assetId": "text_3xk7pu",
+          "order": 1,
+          "durationSec": null,
           "transition": "NONE"
         }
       ]
@@ -173,7 +179,7 @@
       "text_3xk7pu": {
         "id": "text_3xk7pu",
         "type": "TEXT",
-        "source": "새 텍스트",
+        "source": "__DEBUG_NPE__",
         "metadata": {},
         "defaultDurationSec": 10
       }

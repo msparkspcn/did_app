@@ -179,6 +179,7 @@
     const { useEffect, useMemo, useRef, useState } = React;
 
     const MAX_ZONES = 5;
+    const DEV_JWT_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQtMDAxIiwicm9sZSI6ImRldiJ9.mTWi_MeRhODeQ382jeLB26y2rTgE-kyqOIbovUjKUAM';
     const uid = p => `${p}_${Math.random().toString(36).slice(2, 8)}`;
     const num = (v, f = 0) => Number.isFinite(Number(v)) ? Number(v) : f;
     const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
@@ -186,6 +187,7 @@
     function App() {
       const [snapshot, setSnapshot] = useState(null);
       const [didId, setDidId] = useState('did-001');
+      const [token, setToken] = useState(DEV_JWT_TOKEN);
       const [selectedZoneId, setSelectedZoneId] = useState(null);
       const [status, setStatus] = useState({ text: 'ready', isErr: false });
       const centerRef = useRef(null);
@@ -288,7 +290,9 @@
         const target = didId.trim() || 'did-001';
         try {
           setStatusText('불러오는 중...');
-          const res = await fetch(`/api/admin/snapshots/${target}`);
+          const res = await fetch(`/api/admin/snapshots/${target}`, {
+            headers: { Authorization: `Bearer ${token}` }
+          });
           if (!res.ok) throw new Error(`HTTP ${res.status}`);
           const data = await res.json();
           setSnapshot(data);
@@ -314,7 +318,10 @@
 
           const res = await fetch(`/api/admin/snapshots/${target}`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${token}`
+            },
             body: JSON.stringify(payload)
           });
           const out = await res.json();
@@ -442,6 +449,12 @@
             <strong>DID Canvas Editor (React)</strong>
             <span style={{ fontSize: 12, color: '#777' }}>DID</span>
             <input value={didId} onChange={e => setDidId(e.target.value)} />
+            <input
+              style={{ width: 280 }}
+              placeholder="JWT Bearer Token"
+              value={token}
+              onChange={e => setToken(e.target.value)}
+            />
             <button onClick={loadSnapshot}>불러오기</button>
             <button className="save" onClick={saveSnapshot}>저장 + 배포</button>
             <span className="ver">version: {snapshot?.version ?? '-'}</span>
