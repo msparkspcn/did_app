@@ -58,7 +58,8 @@ data class AssetDto(
 enum class AssetType {
     IMAGE,
     VIDEO,
-    TEXT
+    TEXT,
+    PRODUCT
 }
 
 enum class FitMode {

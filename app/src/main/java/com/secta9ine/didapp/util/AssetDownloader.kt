@@ -26,7 +26,6 @@ class AssetDownloader @Inject constructor(
 
                 val connection = URL(url).openConnection()
                 connection.connect()
-                
                 connection.getInputStream().use { input ->
                     FileOutputStream(file).use { output ->
                         input.copyTo(output)

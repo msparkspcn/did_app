@@ -166,6 +166,17 @@
     .asset-item { border:1px solid var(--line); background:#fff; border-radius:8px; padding:6px; font-size:12px; }
     .btns { display:flex; gap:6px; margin-top:8px; }
     .btns button { border:1px solid var(--line); border-radius:6px; padding:6px 8px; font-size:12px; cursor:pointer; }
+    .power-toggle { display:flex; align-items:center; gap:8px; margin-bottom:10px; }
+    .power-toggle label { font-size:12px; }
+    .switch { position:relative; width:40px; height:22px; }
+    .switch input { opacity:0; width:0; height:0; }
+    .slider { position:absolute; cursor:pointer; inset:0; background:#ccc; border-radius:22px; transition:.3s; }
+    .slider:before { content:''; position:absolute; height:16px; width:16px; left:3px; bottom:3px; background:#fff; border-radius:50%; transition:.3s; }
+    .switch input:checked + .slider { background:var(--accent); }
+    .switch input:checked + .slider:before { transform:translateX(18px); }
+    .power-status { font-size:11px; padding:4px 8px; border-radius:4px; margin-top:8px; }
+    .power-status.on { background:#e6f7e6; color:#2d7a2d; }
+    .power-status.off { background:#fde8e8; color:#c53030; }
   </style>
 </head>
 <body>
@@ -190,6 +201,7 @@
       const [token, setToken] = useState(DEV_JWT_TOKEN);
       const [selectedZoneId, setSelectedZoneId] = useState(null);
       const [status, setStatus] = useState({ text: 'ready', isErr: false });
+      const [powerSchedule, setPowerSchedule] = useState({ enabled: false, powerOffTime: '23:00', powerOnTime: '07:00' });
       const centerRef = useRef(null);
       const dragRef = useRef(null);
       const [centerSize, setCenterSize] = useState({ w: 0, h: 0 });
@@ -304,6 +316,40 @@
         }
       };
 
+      const loadPowerSchedule = async () => {
+        const target = didId.trim() || 'did-001';
+        try {
+          const res = await fetch(`/api/admin/devices/${target}/power-schedule`, {
+            headers: { Authorization: `Bearer ${token}` }
+          });
+          if (res.ok) {
+            const data = await res.json();
+            setPowerSchedule({
+              enabled: data.enabled || false,
+              powerOffTime: data.powerOffTime || '23:00',
+              powerOnTime: data.powerOnTime || '07:00'
+            });
+          }
+        } catch (e) {
+          console.warn('Power schedule load failed:', e.message);
+        }
+      };
+
+      const savePowerSchedule = async () => {
+        const target = didId.trim() || 'did-001';
+        try {
+          const res = await fetch(`/api/admin/devices/${target}/power-schedule`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+            body: JSON.stringify(powerSchedule)
+          });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          setStatusText('전원 스케줄 저장 완료');
+        } catch (e) {
+          setStatusText(`전원 스케줄 저장 실패: ${e.message}`, true);
+        }
+      };
+
       const saveSnapshot = async () => {
         if (!snapshot) return;
         const target = didId.trim() || 'did-001';
@@ -355,7 +401,7 @@
           next.assets[id] = {
             id,
             type,
-            source: type === 'TEXT' ? '새 텍스트' : 'https://',
+            source: type === 'TEXT' ? '새 텍스트' : '',
             metadata: {},
             defaultDurationSec: type === 'VIDEO' ? 30 : 10
           };
@@ -436,6 +482,7 @@
 
       useEffect(() => {
         loadSnapshot();
+        loadPowerSchedule();
       }, []);
 
       const zonePlaylist = useMemo(() => {
@@ -530,6 +577,53 @@
             </section>
 
             <aside className="right">
+              <div className="card">
+                <h4>전원 스케줄</h4>
+                <div className="power-toggle">
+                  <label className="switch">
+                    <input type="checkbox" checked={powerSchedule.enabled} onChange={e => setPowerSchedule(prev => ({ ...prev, enabled: e.target.checked }))} />
+                    <span className="slider"></span>
+                  </label>
+                  <label>{powerSchedule.enabled ? '활성화' : '비활성화'}</label>
+                </div>
+                {powerSchedule.enabled && (
+                  <div>
+                    <div className="row">
+                      <div className="field">
+                        <label>종료 시간</label>
+                        <input type="time" value={powerSchedule.powerOffTime} onChange={e => setPowerSchedule(prev => ({ ...prev, powerOffTime: e.target.value }))} />
+                      </div>
+                      <div className="field">
+                        <label>시작 시간</label>
+                        <input type="time" value={powerSchedule.powerOnTime} onChange={e => setPowerSchedule(prev => ({ ...prev, powerOnTime: e.target.value }))} />
+                      </div>
+                    </div>
+                    <div className="btns" style={{ marginTop: 8 }}>
+                      <button style={{ background: '#1f6fff', color: '#fff', borderColor: '#1f6fff' }} onClick={savePowerSchedule}>스케줄 저장</button>
+                    </div>
+                    <div className={`power-status ${(() => {
+                      if (!powerSchedule.enabled) return '';
+                      const now = new Date();
+                      const hhmm = `${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+                      const off = powerSchedule.powerOffTime;
+                      const on = powerSchedule.powerOnTime;
+                      if (off < on) return (hhmm >= off && hhmm < on) ? 'off' : 'on';
+                      return (hhmm >= off || hhmm < on) ? 'off' : 'on';
+                    })()}`}>
+                      현재 상태: {(() => {
+                        if (!powerSchedule.enabled) return '스케줄 없음';
+                        const now = new Date();
+                        const hhmm = `${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+                        const off = powerSchedule.powerOffTime;
+                        const on = powerSchedule.powerOnTime;
+                        if (off < on) return (hhmm >= off && hhmm < on) ? '종료 시간대' : '운영 중';
+                        return (hhmm >= off || hhmm < on) ? '종료 시간대' : '운영 중';
+                      })()}
+                    </div>
+                  </div>
+                )}
+              </div>
+
               <div className="card">
                 <h4>선택 객체 좌표</h4>
                 <div className="coords">

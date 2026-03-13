@@ -1,6 +1,6 @@
 {
   "did-001": {
-    "version": 23,
+    "version": 27,
     "validFromEpochSec": null,
     "validToEpochSec": null,
     "layout": {
@@ -23,9 +23,9 @@
         },
         {
           "id": "center",
-          "x": 360.94938380281695,
+          "x": 497.45881076243717,
           "y": 0,
-          "width": 960,
+          "width": 711.9533291270784,
           "height": 1080,
           "zIndex": 1,
           "backgroundHex": "#000000",
@@ -140,41 +140,6 @@
         "source": "DID V2 Snapshot from API/WS",
         "metadata": {},
         "defaultDurationSec": 8
-      },
-      "video_vih0ly": {
-        "id": "video_vih0ly",
-        "type": "VIDEO",
-        "source": "https://",
-        "metadata": {},
-        "defaultDurationSec": 30
-      },
-      "text_47bdw2": {
-        "id": "text_47bdw2",
-        "type": "TEXT",
-        "source": "새 텍스트",
-        "metadata": {},
-        "defaultDurationSec": 10
-      },
-      "video_e3y73v": {
-        "id": "video_e3y73v",
-        "type": "VIDEO",
-        "source": "https://",
-        "metadata": {},
-        "defaultDurationSec": 30
-      },
-      "image_kbdirb": {
-        "id": "image_kbdirb",
-        "type": "IMAGE",
-        "source": "https://",
-        "metadata": {},
-        "defaultDurationSec": 10
-      },
-      "video_pd3ym1": {
-        "id": "video_pd3ym1",
-        "type": "VIDEO",
-        "source": "https://",
-        "metadata": {},
-        "defaultDurationSec": 30
       },
       "text_3xk7pu": {
         "id": "text_3xk7pu",

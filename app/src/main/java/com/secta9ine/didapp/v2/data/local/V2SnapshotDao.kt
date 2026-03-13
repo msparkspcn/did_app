@@ -27,6 +27,9 @@ abstract class V2SnapshotDao {
     @Query("SELECT COUNT(*) > 0 FROM v2_snapshot")
     abstract suspend fun hasSnapshot(): Boolean
 
+    @Query("SELECT version FROM v2_snapshot WHERE id = 1")
+    abstract suspend fun getSnapshotVersion(): Long?
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     abstract suspend fun upsertSnapshot(entity: V2SnapshotEntity)
 

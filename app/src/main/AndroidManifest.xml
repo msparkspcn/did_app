@@ -53,6 +53,16 @@
             android:name=".system.RestartReceiver"
             android:enabled="true"
             android:exported="false" />
+
+        <receiver
+            android:name=".system.PowerScheduleReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.secta9ine.didapp.ACTION_POWER_OFF" />
+                <action android:name="com.secta9ine.didapp.ACTION_POWER_ON" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

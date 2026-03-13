@@ -4,6 +4,7 @@ import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 import com.secta9ine.didapp.v2.contract.PlayerSnapshotDto
+import com.secta9ine.didapp.v2.contract.PowerScheduleDto
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -34,12 +35,14 @@ class SnapshotWebSocketClient @Inject constructor(
     private var didId: String? = null
     private var jwtToken: String? = null
     private var onSnapshot: ((PlayerSnapshotDto) -> Unit)? = null
+    private var onPowerSchedule: ((PowerScheduleDto) -> Unit)? = null
 
     fun connect(
         wsUrl: String,
         didId: String,
         jwtToken: String,
-        onSnapshot: (PlayerSnapshotDto) -> Unit
+        onSnapshot: (PlayerSnapshotDto) -> Unit,
+        onPowerSchedule: ((PowerScheduleDto) -> Unit)? = null
     ) {
         disconnect()
         shouldReconnect = true
@@ -47,6 +50,7 @@ class SnapshotWebSocketClient @Inject constructor(
         this.didId = didId
         this.jwtToken = jwtToken
         this.onSnapshot = onSnapshot
+        this.onPowerSchedule = onPowerSchedule
         reconnectAttempts = 0
         reconnectJob?.cancel()
         connectInternal()
@@ -68,7 +72,7 @@ class SnapshotWebSocketClient @Inject constructor(
             }
 
             override fun onMessage(webSocket: WebSocket, text: String) {
-                parseSnapshot(text)?.let { onSnapshot?.invoke(it) }
+                parseMessage(text)
             }
 
             override fun onFailure(webSocket: WebSocket, t: Throwable, response: Response?) {
@@ -108,17 +112,28 @@ class SnapshotWebSocketClient @Inject constructor(
         }
     }
 
-    private fun parseSnapshot(text: String): PlayerSnapshotDto? {
-        return runCatching {
-            // Supports:
-            // 1) direct snapshot JSON
-            // 2) envelope { "type": "SNAPSHOT_UPDATED", "payload": {...snapshot...} }
+    private fun parseMessage(text: String) {
+        runCatching {
             val jsonObj = gson.fromJson(text, JsonObject::class.java)
-            if (jsonObj.has("payload")) {
-                gson.fromJson(jsonObj.get("payload"), PlayerSnapshotDto::class.java)
-            } else {
-                gson.fromJson(text, PlayerSnapshotDto::class.java)
+            val type = jsonObj.get("type")?.asString
+
+            when (type) {
+                "POWER_SCHEDULE_UPDATED" -> {
+                    val schedule = gson.fromJson(jsonObj.get("payload"), PowerScheduleDto::class.java)
+                    onPowerSchedule?.invoke(schedule)
+                }
+                "SNAPSHOT_UPDATED" -> {
+                    val snapshot = gson.fromJson(jsonObj.get("payload"), PlayerSnapshotDto::class.java)
+                    onSnapshot?.invoke(snapshot)
+                }
+                else -> {
+                    // Try parsing as direct snapshot JSON (no envelope)
+                    val snapshot = gson.fromJson(text, PlayerSnapshotDto::class.java)
+                    onSnapshot?.invoke(snapshot)
+                }
             }
-        }.getOrNull()
+        }.onFailure { e ->
+            Log.w("SnapshotWS", "Failed to parse WS message: ${e.message}")
+        }
     }
 }

@@ -7,6 +7,7 @@ import com.secta9ine.didapp.data.local.DidDatabase
 import com.secta9ine.didapp.data.remote.DidApi
 import com.secta9ine.didapp.v2.data.local.V2SnapshotDao
 import com.secta9ine.didapp.v2.data.remote.V2PlayerApi
+import com.secta9ine.didapp.system.PowerScheduleManager
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
@@ -72,6 +73,12 @@ object AppModule {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(DidApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun providePowerScheduleManager(@ApplicationContext context: Context): PowerScheduleManager {
+        return PowerScheduleManager(context)
     }
 
     @Provides

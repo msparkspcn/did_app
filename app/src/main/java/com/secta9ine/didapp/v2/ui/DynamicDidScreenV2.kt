@@ -121,6 +121,7 @@ private fun ZoneViewport(
                     }
                 )
                 AssetType.TEXT -> TextContent(text = asset.source, modifier = Modifier.fillMaxSize())
+                AssetType.PRODUCT -> TextContent(text = asset.source, modifier = Modifier.fillMaxSize())
             }
         }
     }
