@@ -3,6 +3,8 @@ package com.secta9ine.didapp.v2.data.repository
 import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.secta9ine.didapp.system.PowerScheduleManager
+import com.secta9ine.didapp.util.AssetDownloader
 import com.secta9ine.didapp.v2.contract.AssetDto
 import com.secta9ine.didapp.v2.contract.AssetType
 import com.secta9ine.didapp.v2.contract.CanvasDto
@@ -10,7 +12,6 @@ import com.secta9ine.didapp.v2.contract.CoordinateSystem
 import com.secta9ine.didapp.v2.contract.FitMode
 import com.secta9ine.didapp.v2.contract.LayoutDto
 import com.secta9ine.didapp.v2.contract.PlayerSnapshotDto
-import com.secta9ine.didapp.v2.contract.PowerScheduleDto
 import com.secta9ine.didapp.v2.contract.TransitionType
 import com.secta9ine.didapp.v2.contract.ZoneDto
 import com.secta9ine.didapp.v2.contract.ZonePlaylistItemDto
@@ -23,8 +24,6 @@ import com.secta9ine.didapp.v2.data.remote.DeviceRegisterRequestDto
 import com.secta9ine.didapp.v2.data.remote.SnapshotWebSocketClient
 import com.secta9ine.didapp.v2.data.remote.V2PlayerApi
 import com.secta9ine.didapp.v2.mock.MockSnapshots
-import com.secta9ine.didapp.system.PowerScheduleManager
-import com.secta9ine.didapp.util.AssetDownloader
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay

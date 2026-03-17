@@ -5,9 +5,9 @@ import androidx.room.Room
 import com.secta9ine.didapp.data.local.DidDao
 import com.secta9ine.didapp.data.local.DidDatabase
 import com.secta9ine.didapp.data.remote.DidApi
-import com.secta9ine.didapp.v2.data.local.V2SnapshotDao
-import com.secta9ine.didapp.v2.data.remote.V2PlayerApi
+import com.secta9ine.didapp.system.FileLogger
 import com.secta9ine.didapp.system.PowerScheduleManager
+import com.secta9ine.didapp.system.TokenManager
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
@@ -22,9 +22,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
-//    private const val DEV_API_BASE_URL = "http://10.0.2.2:8080/api/"
-    private const val DEV_API_BASE_URL = "http://10.212.44.212:8080/api/"
-    private const val DEV_JWT_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQtMDAxIiwicm9sZSI6ImRldiJ9.mTWi_MeRhODeQ382jeLB26y2rTgE-kyqOIbovUjKUAM"
+    private const val API_BASE_URL = "http://10.120.44.88:14000/api/v1/"
 
     @Provides
     @Singleton
@@ -42,24 +40,42 @@ object AppModule {
     }
 
     @Provides
-    fun provideV2SnapshotDao(database: DidDatabase): V2SnapshotDao {
-        return database.v2SnapshotDao()
-    }
-
-    @Provides
     @Singleton
     fun provideGson(): Gson = Gson()
 
     @Provides
     @Singleton
-    fun provideOkHttpClient(): OkHttpClient {
+    fun provideTokenManager(@ApplicationContext context: Context): TokenManager {
+        return TokenManager(context)
+    }
+
+    @Provides
+    @Singleton
+    fun provideOkHttpClient(tokenManager: TokenManager, logger: FileLogger): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor { chain ->
                 val req = chain.request()
-                val withAuth = req.newBuilder()
-                    .addHeader("Authorization", "Bearer $DEV_JWT_TOKEN")
-                    .build()
-                chain.proceed(withAuth)
+                val token = tokenManager.getAccessToken()
+                val newReq = if (token != null) {
+                    req.newBuilder()
+                        .addHeader("Authorization", "Bearer $token")
+                        .build()
+                } else {
+                    req
+                }
+
+                logger.d("HTTP", "→ ${newReq.method} ${newReq.url}")
+
+                val response = chain.proceed(newReq)
+                val responseBody = response.body
+                val bodyString = responseBody?.source()?.let { source ->
+                    source.request(Long.MAX_VALUE)
+                    source.buffer.clone().readString(Charsets.UTF_8)
+                }
+
+                logger.d("HTTP", "← ${response.code} ${newReq.method} ${newReq.url} body=$bodyString")
+
+                response
             }
             .build()
     }
@@ -68,7 +84,7 @@ object AppModule {
     @Singleton
     fun provideDidApi(okHttpClient: OkHttpClient): DidApi {
         return Retrofit.Builder()
-            .baseUrl(DEV_API_BASE_URL)
+            .baseUrl(API_BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
@@ -83,12 +99,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideV2PlayerApi(okHttpClient: OkHttpClient, gson: Gson): V2PlayerApi {
-        return Retrofit.Builder()
-            .baseUrl(DEV_API_BASE_URL)
-            .client(okHttpClient)
-            .addConverterFactory(GsonConverterFactory.create(gson))
-            .build()
-            .create(V2PlayerApi::class.java)
+    fun provideFileLogger(@ApplicationContext context: Context): FileLogger {
+        return FileLogger(context)
     }
 }

@@ -12,7 +12,7 @@
 
 ## 2) Target v2 model
 
-- `assets`: reusable content metadata (`image`, `video`, `text`, `web`)
+- `assets`: reusable content metadata (`image`, `video`, `text`)
 - `layout`: canvas + zones (`x/y/width/height` as editor-canvas absolute pixels)
 - `coordinateSystem`: `CANVAS_PIXEL`(권장) / `RELATIVE_RATIO`(하위호환)
 - `zonePlaylists`: per-zone playback sequence and duration overrides
