@@ -8,9 +8,10 @@ app/build/
 docs/Quber_Platform_Key/
 docs/Quber_Platform_Key*.zip
 
-# Local settings
-.claude/settings.local.json
-mock-server/.claude/settings.local.json
+# Claude Code
+CLAUDE.md
+.claude/
+mock-server/.claude/
 
 # Build reports
 build/
