@@ -2,11 +2,14 @@ package com.secta9ine.didapp.di
 
 import android.content.Context
 import androidx.room.Room
+import com.secta9ine.didapp.data.local.DeviceDao
 import com.secta9ine.didapp.data.local.DidDao
 import com.secta9ine.didapp.data.local.DidDatabase
 import com.secta9ine.didapp.data.remote.DidApi
 import com.secta9ine.didapp.system.FileLogger
+import com.secta9ine.didapp.system.NetworkMonitor
 import com.secta9ine.didapp.system.PowerScheduleManager
+import com.secta9ine.didapp.system.QuberAgentManager
 import com.secta9ine.didapp.system.TokenManager
 import com.google.gson.Gson
 import dagger.Module
@@ -37,6 +40,11 @@ object AppModule {
     @Provides
     fun provideDidDao(database: DidDatabase): DidDao {
         return database.didDao()
+    }
+
+    @Provides
+    fun provideDeviceDao(database: DidDatabase): DeviceDao {
+        return database.deviceDao()
     }
 
     @Provides
@@ -101,5 +109,21 @@ object AppModule {
     @Singleton
     fun provideFileLogger(@ApplicationContext context: Context): FileLogger {
         return FileLogger(context)
+    }
+
+    @Provides
+    @Singleton
+    fun provideNetworkMonitor(@ApplicationContext context: Context): NetworkMonitor {
+        return NetworkMonitor(context)
+    }
+
+    @Provides
+    @Singleton
+    fun provideQuberAgentManager(
+        @ApplicationContext context: Context,
+        gson: Gson,
+        logger: FileLogger
+    ): QuberAgentManager {
+        return QuberAgentManager(context, gson, logger)
     }
 }

@@ -28,13 +28,19 @@ import androidx.core.view.WindowInsetsControllerCompat
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.CircularProgressIndicator
-import com.secta9ine.didapp.ui.components.TextContent
+import androidx.compose.ui.layout.ContentScale
+import coil.compose.AsyncImage
+import com.secta9ine.didapp.system.QuberAgentManager
 import com.secta9ine.didapp.ui.theme.DidAppTheme
 import com.secta9ine.didapp.ui.viewmodel.DidViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    @Inject lateinit var quberAgentManager: QuberAgentManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -45,7 +51,10 @@ class MainActivity : ComponentActivity() {
 
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
+        quberAgentManager.bind()
+
         setContent {
+
             DidAppTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -118,21 +127,59 @@ class MainActivity : ComponentActivity() {
                             }
 
                             DidViewModel.Stage.AUTHENTICATED -> {
+                                AsyncImage(
+                                    model = "https://picsum.photos/1920/1080",
+                                    contentDescription = null,
+                                    modifier = Modifier.fillMaxSize(),
+                                    contentScale = ContentScale.Crop
+                                )
+                            }
+
+                            DidViewModel.Stage.OFFLINE_ACTIVE -> {
                                 Column(
                                     horizontalAlignment = Alignment.CenterHorizontally,
                                     verticalArrangement = Arrangement.Center
                                 ) {
                                     Text(
-                                        text = "인증 완료",
-                                        color = Color.White,
+                                        text = "오프라인 모드",
+                                        color = Color(0xFFFFB74D),
                                         fontSize = 28.sp,
                                         fontWeight = FontWeight.Medium
                                     )
                                     Spacer(modifier = Modifier.height(24.dp))
                                     Text(
-                                        text = "컨텐츠 로딩 준비 중",
+                                        text = "서버 연결 없이 동작 중\n연결 복구 시 자동 동기화됩니다",
                                         color = Color.Gray,
-                                        fontSize = 18.sp
+                                        fontSize = 18.sp,
+                                        textAlign = TextAlign.Center
+                                    )
+                                }
+                                // TODO: 마지막 스냅샷 기반 컨텐츠 표시
+                            }
+
+                            DidViewModel.Stage.SERVER_UNREACHABLE -> {
+                                Column(
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                    verticalArrangement = Arrangement.Center
+                                ) {
+                                    Text(
+                                        text = "서버 연결 필요",
+                                        color = Color(0xFFFF6B6B),
+                                        fontSize = 28.sp,
+                                        fontWeight = FontWeight.Medium
+                                    )
+                                    Spacer(modifier = Modifier.height(24.dp))
+                                    Text(
+                                        text = uiState.message ?: "서버에 연결할 수 없습니다.",
+                                        color = Color.Gray,
+                                        fontSize = 18.sp,
+                                        textAlign = TextAlign.Center
+                                    )
+                                    Spacer(modifier = Modifier.height(32.dp))
+                                    Text(
+                                        text = "네트워크 연결 후 자동으로 재시도합니다",
+                                        color = Color.DarkGray,
+                                        fontSize = 14.sp
                                     )
                                 }
                             }
@@ -162,5 +209,10 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    override fun onDestroy() {
+        quberAgentManager.unbind()
+        super.onDestroy()
     }
 }

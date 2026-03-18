@@ -1,0 +1,8 @@
+{
+  "did-001": {
+    "didId": "did-001",
+    "status": "ACTIVE",
+    "activatedAtEpochSec": 1773377732,
+    "updatedAtEpochSec": 1773377732
+  }
+}

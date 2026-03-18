@@ -1,2 +1,16 @@
 app/build/
 .gradle/
+
+# Signing keys
+*.jks
+*.pk8
+*.pem
+docs/Quber_Platform_Key/
+docs/Quber_Platform_Key*.zip
+
+# Local settings
+.claude/settings.local.json
+mock-server/.claude/settings.local.json
+
+# Build reports
+build/
